@@ -4,7 +4,7 @@ Repositorio de la clase de Fuendes de Datos (Otonyo 23)
 ![fdd_p24](fdd_p24.png)
 
 ## Recursos
-[Drive/Documentos de la Clase](hhttps://drive.google.com/drive/folders/1DXsOaW1AnoSYKPAhmYsH04TMPCoBIq8z?usp=sharing)  
+[Drive/Documentos de la Clase](https://drive.google.com/drive/folders/1DXsOaW1AnoSYKPAhmYsH04TMPCoBIq8z?usp=sharing)  
 
 [Syllabus](https://docs.google.com/document/d/1sRP2-RGkVfakVQfbZ5_rnIBnFdklFVELDoaUghJ_IqY/edit?usp=drive_link)  
 

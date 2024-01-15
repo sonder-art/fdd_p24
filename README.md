@@ -1,4 +1,4 @@
-# fdd_o23
+# fdd_p24
 Repositorio de la clase de Fuendes de Datos (Otonyo 23)
 
 ![fdd_p24](fdd_p24.png)

@@ -1,0 +1,14 @@
+level 5 -> 6
+cd inhere
+ls
+find ./ -type f -size 1033c ! -executable
+cd maybehere07
+cat .file2
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+level 6 -> 7
+ssh -p 2220 bandit6@bandit.labs.overthewire.org
+find / -type f -user bandit7 -group bandit6 -size 33c
+cat /var/lib/dpkg/info/bandit7.password
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+
+

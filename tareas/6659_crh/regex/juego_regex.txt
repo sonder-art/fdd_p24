@@ -1,0 +1,10 @@
+Warmup: foo
+Anchors: ick$
+It never ends: fu\b
+Ranges: ^[a-f]*$
+A partir de aquí me apoyé en los videos y en tutoriales porque me rendí lol
+Back refs: ^(...).*\1
+Abba: ^(?!(.)+\1)|.u
+A man a plan: ^(.)[^p].*\1$
+Prime: ^(?!(xx+)\1+$)
+Four: (.)(.\1){3}

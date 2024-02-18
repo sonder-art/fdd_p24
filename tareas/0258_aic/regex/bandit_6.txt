@@ -1,0 +1,30 @@
+Level 5-->6 
+primero entré con cd a inhere, ahí busqué con find . -size 1033c para encontrar que tuviera el tamaño específico que me decía la pagina y de ahí me dio que el file 2 tenía ese tamaño. 
+Después verifiqué con file ./-file2 si era ASCII lo cual si era y de ahí le hice cat ./file2
+
+pwd 
+cd inhere 
+find . -size 1033c ! -executable --> me dio que lo cumplia en maybehere07 con  el file2
+file ./-file2
+cat ./maybehere07/.file2
+
+
+Contraseña: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+Level 6-->7
+Me decía que era el usuario bandit 7 entonces hice un pwd y vi que era en bandit6 y me regresé a home, después ya hice cd a bandit7. 
+
+una vez me puse en el usuario di ls y había un data.txt, así que rápido le hice cat y me decía "permision denied" y tuve que ponerme a buscar en internet. 
+
+Resultó que a lo que buscaba con file solo debía ponere 2>/dev/null porque eso hace que no nos salgan los mensajes de error y de ahí ya podamos ver la contraseña. 
+
+Entonces lo que hice fue: 
+pwd 
+cd ..
+cd bandit7
+find / -type f -user bandit7 -group bandit6 -size 33c
+find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null (aquí para que ya no saliera lo de sin permiso)
+cat /var/lib/dpkg/info/bandit7.password esto ya me da la contrasela (la verdad, yo pensé que seguía siendo el data txt y solo le quitaban que no pudiera entrar, pero luego no me salió y le pregunté a chat y me dijo "hazle cat a lo que te dio de resultado con el otro comando" y yo le hice caso). 
+
+
+Contraseña: z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S

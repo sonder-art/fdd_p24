@@ -1,10 +1,23 @@
-Warmup: foo
-Anchors: ick$
-It never ends: fu\b
-Ranges: ^[a-f]*$
+Warmup: foo #Busca los que tengan foo
+Anchors: ick$ #Busca los que terminen con ick
+It never ends: fu\b #Busca que su límite sea fu
+Ranges: ^[a-f]*$ #que inicie con ^[a-f] que se repita con estas letras * y que
+termine con estas letras $
 A partir de aquí me apoyé en los videos y en tutoriales porque me rendí lol
-Back refs: ^(...).*\1
-Abba: ^(?!(.)+\1)|.u
+Back refs: ^(...).*\1 #Incia con tres caracteres (...),
+ seguidos de caracteres random y ocurrencias .*
+ y que se repitan los tres caracteres \1
+Abba: ^(?!(.)+\1)|ef #La primera parte pide que no se repitan caracteres
+^(?!(.)+\1), 
+la segunda es un o |, entonces al final que tengan 'ef' 
 A man a plan: ^(.)[^p].*\1$
+ #Busca que inice con cualquier caracter^(.), que el
+resto no tenga p[^p], luego repeticiones de cualquier caracter .*
+ y que termine con el mismo caracter que con el que inicio \1$ 
 Prime: ^(?!(xx+)\1+$)
+ #checa que no haya repeticiones de una subcadena de x´s
+xx+ checa la repiticion dex en un grupo, \1+$ checa que se repita una o 
+mas veces hasta el final, ?! es la negación y ^ que incia
 Four: (.)(.\1){3}
+ #Ve el primer caracter(.), luego checa el segundo, tercero y 
+cuarto y ve que se repitan en la palabra (.\1){3}

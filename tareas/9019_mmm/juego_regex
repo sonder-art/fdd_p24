@@ -1,0 +1,11 @@
+Level 1
+foo
+
+Level 2
+ick$
+
+Level 3
+fu\b
+
+Level 4
+[a-f]{4}

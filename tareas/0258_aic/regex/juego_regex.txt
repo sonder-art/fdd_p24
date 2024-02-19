@@ -1,0 +1,46 @@
+Juego de Regex 
+
+Nivel: Warmup 
+Solo puse foo porque solo requiero que encuentre ese patrón 
+
+Nivel:Anchors
+Busqué que terminara con ick, entonces puso ick$
+
+Nivel: It never ends 
+Aquí recordé lo que nos dijo en clase y utilicé el ?! porque no se podía poner $. Entonces, el comando fue u(?!.) para que no hubiera algo después de la u. 
+
+Nivel:Rangers
+Este me costó mucho más y tuve que ver un video, pero al final fue pensarlo como su complemento. 
+Que no comience con algo de la g-z y que hubiera alguna repetición del caracter anterior antes del final de la línea.
+
+^[^g-z]+$ aunque aún no me deja muy claro como es que chymia cumple esto si no acaba en g-z. 
+
+Nivel: Backrerfs
+
+Encontré el patrón más fácil, pero tuve que buscar cómo hacer que hiciera referencia a mi primer grupo. 
+Resultó que era con \1, quiero ver si lo puedo usar más para ver cómo funciona. 
+Lo que terminé escribiendo fue que iniciara con cualqueir cosa de 3 letras, tuviera más letras y de ahí que se volviera a encontrar el patrón del inicio:  ^(...).*\1
+
+Nivel: Abba
+Buena música, odio generalizado a este nivel. 
+El patrón no fue difícil de encontrar, solo que escribirlo lo fue. 
+
+Tuve que buscar más sobre \1 y entonces me di cuenta que significaba como "estos espacios () en el regex" y ahí ya fue cuando salió. 
+Entonces básicmanete dice como que no "fijate que el grupo 2 no se repita en espejo del grupo 1" que es el corazón de este nivel. El resto solo es que puede haber cosas ANTES de encontrar el patrón que se repite en espajo.   ^(?!.*([a-z])([a-z])\2\1)
+
+Nivel: A man, a plan
+Primero me di cuenta que eran palíndromos y como no supe como hacer que se cortaran a la mitad (había un hint de tamaño y pensé que iba por ese lado) entonces decidí solo buscar que la última y la primera letra hicieran match, PERO nada es tan fácil y estaba la palabra sporous en la lista que no debía. 
+Después de un muy buen rato me percaté que la segunda y la penultima letra no concordaban y me basé en el nivel ABBA para la solución. 
+
+Al final fue "que las primeras dos letras cualesquiera sean mis últimas dos letras, pero invertido"  ^(.)(.).*\2\1$
+
+Nivel: Prime
+No mentiré, esta NO la logré. No se me ocurrió nada. Sin embargo, busqué la respuesta Y TAMPOCO LA ENTENDÍ. Voy a preguntarla el lunes. 
+La respuesta que me salió: ^(?!(xx+)\1+$)
+
+Nivel: Four
+Esta vez el nombre si ayudó (sobre todo porque me dijeron ignóralo). Era una vocal que se repetia con intervalos de 3 consonantes. Entonces era: 
+vocalA consonantes vocalA consonantes vocalA consonante vocalA (aquí sirvió mucho saber que los apellidos japonenese son fonéticos). 
+Entonces fue literal una vocal cualqueira cosa (.) y \1 haciendo referencia al primer grupo:  ([aeiou]).\1.\1.\1
+
+

@@ -1,0 +1,28 @@
+201507
+Javier M
+
+    --BANDIT--
+
+LEVEL 5:
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+find -size 1033c
+cat inhere/maybehere07/.file2
+
+PWD
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+
+LEVEL 6:
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+   Investigué esta respuesta porque pensé que algo estaba mal con mi
+   terminal (me marcaba errores de permisos). El comando find busca en
+   todos los subdirectorios del directorio especificado (o el actual),
+   las banderas type, user, group y size nos ayudan a filtrar los archivos
+   (buscamos un tipo archivo, del usuario bandit7, del grupo bandit6 y de
+   tamaño 33 bytes, especificado con 33c). Finalmente, el 2>/dev/null
+   elimina los mensajes de error de la salida (para solo ver los archivos).
+cat /var/lib/dpkg/info/bandit7.password
+
+PWD
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S

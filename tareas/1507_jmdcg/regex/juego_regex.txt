@@ -1,0 +1,28 @@
+Tarea de Regex. Soluciones:
+
+foo
+encontrar subcadena en palabras
+
+ck$
+encontrar patrón al final de la línea
+ 
+\b[^zlc]+\b
+no utilizar finales de línea (limitar por palabras, no líneas)
+
+^[a-f]+$
+las palabras a seleccionar sólo usan letras de la "a" a la "f"
+
+^(.{3}).*\1
+una subcadena de cualesquiera 3 caracteres, luego cualquier cosa, y luego repetir esos 3 caracteres
+
+^(?:(?!(.)(.)\2\1).)*$
+negación: no incluír patrones que encuentren una letra, luego repita 2 veces otra letra, y luego repita la primera
+
+^(\w)(\w?)(\w?)\w?\3\2\1$
+considera solo palíndromos (de hasta 7 letras)
+
+^(?!(xx+)\1+$)
+negación: solo tomara cadenas que sean de longitud prima. si alguna cadena puede expresarse como repeticiones de otra, no la tomará
+
+(.)(.\1){3}
+3 letras, alguna otra letra, y otra vez las primeras 3 letras

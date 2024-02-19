@@ -16,4 +16,4 @@ COPY . /app
 #RUN touch archivo_imagen_docckerfile.txt
 
 # Define el comando por defecto para ejecutar la aplicación
-CMD ["python", "app.py"]
+# Termina el Dockerfile

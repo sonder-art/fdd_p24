@@ -1,14 +1,19 @@
 level 5 -> 6
-cd inhere
+cd inhere //Entramos al directorio de inhere
 ls
-find ./ -type f -size 1033c ! -executable
-cd maybehere07
-cat .file2
+find ./ -type f -size 1033c ! -executable //Encontramos algo  de tipo 
+file, tamaño 1033 y human readable ejecutable
+cd maybehere07 // ya que lo encontramos nos metemos al directorio donde esta
+cat .file2 //Lo leemo
 P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 level 6 -> 7
+Entramos al siguiente nivel
 ssh -p 2220 bandit6@bandit.labs.overthewire.org
-find / -type f -user bandit7 -group bandit6 -size 33c
-cat /var/lib/dpkg/info/bandit7.password
+find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+ //Encontramos algo
+de tipo file, tamaño 33 del usuario bandit7 y del grupo bandit6, tambien 
+agregamos 2>/dev/null para que se quiten los permissions denied
+cat /var/lib/dpkg/info/bandit7.password //Lo leemos
 z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
 
 

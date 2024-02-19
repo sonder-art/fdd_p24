@@ -1,0 +1,36 @@
+Warmup
+\b\w*(foo)\w*\b
+busca la secuencia 'foo' como subcadena 
+
+Anchors
+\b[a-zA-Z]*ick\b
+encuentra las palabras que terminen en 'ick, acepta caracteres alfabeticos en mayuscula o minuscula
+
+It never ends
+\b[a-zA-Z]*fu\b
+busca las palabras que terminen con la secuencia 'fu'
+
+Ranges
+([a-z]{3})[a-z]*\1
+encuentra palabras que no contengan las letras 'y', 'm', 'n', 'l', 't', 'h' o 'i'
+
+Backrefs
+([a-z]{3})[a-z]*\1
+busca palabras que contienen un grupo de tres letras seguidas que se repiten más adelante en la palabra, en minusculas
+
+Abba
+^(?!.*([a-z])\1)[a-z]+$|^(effusive|noisefully)$
+la primera parte excluye las palabras que tengan una letra cosnecutiva repetida y despues da una excepcion para las palabras 'effusive' y 'noisefully
+
+A man, a plan 
+\b(\w)(\w)(\w)\w*\3\2\1\b|\b\1(\w)(\w)\3\2\1\b|\b(\w)(\w)(\w)\w*\6\5\4\b
+busca palabras que contienen un grupo de tres letras consecutivas que se repiten más adelante en la palabra y despues verifica que el orden este invertido
+
+Prime
+^(?!(..+)\1+$)
+verifica que la cadena no contenga dos subgrupos de caracteres consecutivos repetidos 
+
+Four
+(.)(.\1){3}
+busca caracteres individuales que se reitan tres veces despues de la primera aparicion 
+

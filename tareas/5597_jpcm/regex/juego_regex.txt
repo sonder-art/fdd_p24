@@ -1,0 +1,48 @@
+Primera pregunta:
+foo
+Razonamiento: encontre el patron que todas contenian el prefijo foo
+
+Segunda pregunta:
+ick$
+Razonamiento: encontre el patron que todas contenian el prefijo ick al final de la palabra
+
+Tercera pregunta:
+u\b
+Razonamiento: encontre que el patron era que todas terminaban con u. El \b revisa el borde de las palabras
+
+Cuarta pregunta:
+[a-f]{4}
+Razonamiento: encontre que el patron era que todas tenian cuatro letras juntas en el rango de la a-f
+
+Quinta pregunta:
+(...).*\1
+Razonamiento: encontre en internet que usando (...) creas grupos, en este caso de tres caracteres.
+Despues el .* avisa que puede o no haber caracteres despues. El \1 es para que regex trate de encontrar
+una coincidencia exacta de la misma secuencia de tres caracteres. 
+
+Sexta pregunta: 
+^(?!(.)+\1)|fu
+Razonamiento: encontre que las palabras de la derecha todas tenian letras repetidas. Busque en chat gpt como 
+eliminar las palabras que tuvieran letras repetidas. Esa es la primera parte del comando. 
+La expresión completa (?!(.)+\1) significa "asegurarse de que no haya repeticiones consecutivas de cualquier carácter en la cadena".
+Al final puse un or logico para completar las palabras de la izquierda 
+
+Septima pregunta:
+^(.)[^p].*\1$
+Razonamiento: encontre que las palabras de la izquierda empezaban y terminaban con la misma letra.
+Le pedi a chat gpt que me hiciera un regex para solucionar esto. ^(.).*\1$. Aqui se guarda la primera
+palabra y la compara con la ultima. Si son iguales regresa true. Sin embargo habia una palabra de la izquierda
+que cumplia con esto. Para eso pusimos el [^p] para que el segundo caracter no pudiera ser una p
+
+Octava pregunta:
+^(?!(..+)\1+$)
+Razonamiento: estamos buscando los patrones de x que sean numeros primos. Para lograr esto vamos a observar si
+se pueden hacer sub grupos de x, si se pueden hacer significa que no son primos y el regex es falso.
+El (..+) captura los grupos
+\1+$ checa que haya uno o mas grupos
+?! es un lookhead negativo donde si el patron no se cumple la expresion avanza, si se cumple la concidencia falla
+
+Novena pregunta:
+([aeio]).{5}\1
+Razonamiento: Vemos que las palabras de la derecha tienen cuatro vocales separadas cada una por 
+otras letras ([aeio]). considera el caracter vocal/otra letra {5} que se repita 4 veces \1 que al menos pase una vez

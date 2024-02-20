@@ -1,0 +1,13 @@
+Level 5 a6
+# parados en el directorio /inhere, aplicamos la busqueda en archivos tuipo file (f), huma-readable, not executable de ttamaño 1033bytes 
+find -type f -readable ! -executable -size 1033c
+# obtenemos ./maybehere07/.file2
+ cat .file2
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+Level 6 a 7
+#la busqueda se realizara en todo el servidos (/), solo se aplicara la busqueda al tipo file (f), con user bandit7, group bandit6, con un tamaño de 33bytes y sin mostrar mensajes de error (2>/dev/null)
+find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+# se obtiene /var/lib/dpkg/info/bandit7.password
+#cat /var/lib/dpkg/info/bandit7.password para extraer la contraseña que es :
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S

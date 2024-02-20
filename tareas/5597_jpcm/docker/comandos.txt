@@ -1,0 +1,46 @@
+docker pull: El comando se utiliza para bajar una imagen de DockerHub a tu maquina local. 
+Puedes hacer docker pull nombreDeLaImagen:TagImagen
+
+docker images: Te muestra todas las imagenes que tienes en tu Docker
+
+docker run: El comando se utiliza para correr la imagen en un contenedor.
+Con Control+C se interrumpe la corrida. 
+
+docker run nombre:tag hace un pull y un run al mismo tiempo
+
+docker run --options: Se puede usar docker run -d para correrlo y que puedas seguir usando tu terminal. El -d es de "detached"
+significa que lo vas a correr en un seugndo plano. Este comando arroja un Id como resultado
+
+docker run -pPuertolocal:puertoDocker
+
+Ahora combinados-> docker run -p Puertolocal:puertoDocker -d nombreDeLaImagen
+
+Si quieres nombrar tu contenedor -> docker run -d -pPuertolocal:puertoDocker --name nombreContenedor imagen:tag
+
+docker stop: Para los contenedores que tienes corriendo en un segundo plano
+
+docker start: Inicia de nuevo los contenedores que pusiste en stop
+
+docker ps: El comando te dice cuales son los contenedores que se estan ejecutando.
+docker ps -a te muestra todos los contenedores que estan o no corriendo
+
+docker exec -it: Si quieres observar la configuracion del contenedor para checar las variables del ambiente 
+se usa este comando. El -it significa "interactive terminal" 
+
+docker exec -it nombre/id_del_contenedor bin/bash te habre una terminal de en bash
+
+Adentro de esta terminal para imprimir las variables de ambiente se usa env
+
+Para salir exit
+
+docker logs: Si tu aplicacion no se puede conectar y quieres ver porque, utilizas
+docker logs id o docker logs nombreContenedor
+
+docker build: Este comando sirve para crear una imagen
+
+docker build -t nombreDeLaImagen:tag locacionDelDockerfile
+
+docker rmi: elimina la imagen que quieras. Nota, no la puedes borrar si la estas usando
+docker rmi idImagen
+
+docker rm: elimina el contenedor

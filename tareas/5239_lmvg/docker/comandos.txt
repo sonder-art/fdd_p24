@@ -1,0 +1,16 @@
+docker images = lista de imagenes locales 
+docker ps =  lista de contenedores corriendo actualmente
+docker pull {name}:{tag} =  jala una imagen desde el registro
+docker run {name}:{tag} =  crea un contenedor para la imagen y empieza a correr 
+-d or --detach: corre el contenedor en el backround e imprime el ID del contenedor (desbloquea la terminal)
+docker logs {container} = puedes ver como se ve y ver que esta corriendo en el contendor 
+docker stop {container} = para el contendor que esta corriendo 
+-p or --publish = publica el puerto del contenedor al host
+-p {HOST_PORT}:{CONTAINER_PORT} = expone el contenedor al local
+-a or -all = da la lista de todos los contenedores creados, corriendo o parados
+docker start {container} = empieza uno o mas contenedores parados
+-- name = le da un nombre especifico al contenedor 
+docker build {path} = hace una imagen desde un Dockerfile
+-t or --tag = da un nombre a la imagen en el formato "name:tag"
+docker exec -it {container} = tienes la terminal de ese contenedor para checar lo que hay adentro, sistema virtual 
+exit = sales de la terminal 

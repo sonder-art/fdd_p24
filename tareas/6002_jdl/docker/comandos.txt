@@ -1,0 +1,37 @@
+Comandos
+
+1:checar imagenes que tenemos 
+docker images
+2:checar contenedores que estan corriendo
+docker ps
+3:bajar una imagen de un "registry", de dockerhub por default, como el git pull
+#los : son la version sin : es el latest
+docker pull {nombreDeLaImagen}:{tag}
+4:correr alguna imagen en específico
+#puedes correr una imagen que no tengas en local, hace el pull automático
+docker run {name}:{tag}
+5: detach, corre contenedor en el background y te da su ID
+-d or --detach, docker run -d{name}:{tag}
+6:Te deja ver los logs de los contenedores que estan corriendo
+docker logs {containerID}
+7: Port binding, conectar un puerto del local al contenedor, puedes acceder a esa imagen desde ese puerto
+flag -p, docker run -d -p {HOST_PORT}:{CONTAINER_PORT} {containerID}:{Tag}
+8: parar el contenedor
+docker stop {containerID}
+9:iniciar un contenedor
+docker start {containerID}
+10: list de todos los contenedores (correindo y no)
+-a, docker ps -a
+11: darle nombre a los contenedores con esto les puedes dar start y run
+docker run --name -d -p {HOST_PORT}:{CONTAINER_PORT} {containerID}:{Tag}
+12: quitar un contenerdo
+docker rm  {containerID}
+#primero quitar el contenedor
+13: quitar una imagen
+docker rmi {imagen}
+14: crear una imagen
+docker build -t {nombre}:{tag}
+15:ejecutar una imagen
+docker exec -it {nombre}
+
+

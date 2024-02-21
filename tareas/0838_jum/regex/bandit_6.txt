@@ -12,12 +12,14 @@ P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU\
 du -ba | grep 1033\
 cat ./maybehere07/.file2\
 P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU\
-##al ver las especificaciones, pens\'e9 que eran pocos los documentos que fueran de justo 1033 bytes entonces usando el grep, busque los que tuvieran esa longitud y solo me dio un archivo\
+##al ver las especificaciones, pens\'e9 que eran pocos los documentos que fueran de justo 1033 bytes entonces usando el grep, busque los que tuvieran esa longitud y 
+solo me dio un archivo\
 \
 6-> 7\
 find / -user bandit7 -group bandit6 -size 33c\
 cat /var/lib/dpkg/info/bandit7.password\
 z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S\
-##Usamos el find para buscar todas las especificaciones que nos da el nivel y nos arroja un buen de archivos, en esa lista solo buscamos los que podamos acceder y lo abrimos\
+##Usamos el find para buscar todas las especificaciones que nos da el nivel y nos arroja un buen de archivos, en esa lista solo buscamos los que podamos acceder y lo 
+abrimos\
 \
 }

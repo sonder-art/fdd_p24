@@ -1,0 +1,17 @@
+1. docker pull <image_name>: Descarga una imagen de Docker desde un repositorio.
+2. docker build <path_to_Dockerfile>: Construye una imagen Docker a partir de un Dockerfile.
+3. docker run <image_name>: Ejecuta un contenedor basado en una imagen específica.
+4. docker ps: Muestra una lista de contenedores en ejecución.
+5. docker ps -a: Muestra una lista de todos los contenedores (incluso los detenidos).
+6. docker stop <container_id>: Detiene un contenedor en ejecución utilizando su ID.
+7. docker start <container_id>: Inicia un contenedor detenido utilizando su ID.
+8. docker restart <container_id>: Reinicia un contenedor en ejecución utilizando su ID.
+9. docker rm <container_id>: Elimina un contenedor detenido utilizando su ID.
+10. docker rmi <image_name>: Elimina una imagen Docker del sistema.
+11. docker images: Lista todas las imágenes de Docker disponibles en el sistema.
+12. docker exec -it <container_id> <command>: Ejecuta un comando dentro de un contenedor en ejecución.
+13. docker logs <container_id>: Muestra los logs generados por un contenedor específico.
+14. docker inspect <container_id>: Muestra información detallada sobre un contenedor.
+15. docker network ls: Lista todas las redes de Docker disponibles en el sistema.
+16. docker volume ls: Lista todos los volúmenes de Docker disponibles en el sistema.
+

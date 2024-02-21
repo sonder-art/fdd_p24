@@ -1,0 +1,34 @@
+docker pull:
+get a docker from website
+
+docker run:
+creates a container
+
+docker run -d:
+runs container in detach mode
+
+docker run -phost:conatainer:
+binds port in host to port in cntainer
+
+docker images:
+gives you all the images you have locally
+
+docker ps:
+get info of all running containers
+
+docker stop:
+stop docker from running
+
+docker start:
+restart stopped docker
+
+docker ps -a:
+shows all containers, running or not
+
+docker exec -it "id" /bin/bas::
+executes the dockers interactive terminal
+
+docker logs:
+get logs from docker
+
+

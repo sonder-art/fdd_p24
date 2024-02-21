@@ -1,34 +1,49 @@
-docker pull:
-get a docker from website
+1) docker pull <imagen>:
+descarga una imagen desde algún registro
 
-docker run:
-creates a container
+2) docker run <imagen>:
+crea y ejecuta un contenedor de la imagen
 
-docker run -d:
-runs container in detach mode
+3) docker run <image:tag>:
+combina docker pull y docker start en un comando.
 
-docker run -phost:conatainer:
-binds port in host to port in cntainer
+4) docker run -d:
+Lo corre en "detach mode", en el background para seguir usando la terminal
 
-docker images:
-gives you all the images you have locally
+5) docker run -p <host>:<container>:
+mapea un cierto puerto del host a uno del contenedor
 
-docker ps:
-get info of all running containers
+6) docker run --name <name>:
+crea contenedor con cierto nombre
 
-docker stop:
-stop docker from running
+7) docker images:
+te da todas las imágenes que tienes localmente
 
-docker start:
-restart stopped docker
+8) docker ps:
+info de contenedores activos
 
-docker ps -a:
-shows all containers, running or not
+9) docker ps -a:
+info de contenedores activos o no activos
 
-docker exec -it "id" /bin/bas::
-executes the dockers interactive terminal
+10) docker stop <contenedor>:
+detiene ejecución de cierto contenedor
 
-docker logs:
-get logs from docker
+11) docker start <contenedor>:
+ejecuta cierto contenedor previamente creado.
+
+12) docker exec <contenedor>:
+para ejecutar un comando nuevo en el contenedor.
+
+13) docker exec -it "id" /bin/bash:
+ejecuta una terminal del docker.
+
+14) docker logs <contenedor>:
+te da los logs producidos en cierto docker, ayuda a debuggear.
+
+15) docker rm <contenedor>:
+borra un contenedor (no puede estar corriendo)
+
+16) docker rmi <imagen>:
+borra una imagen.
 
 

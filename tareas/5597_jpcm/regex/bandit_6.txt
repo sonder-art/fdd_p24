@@ -1,0 +1,25 @@
+Nivel 5 -> 6
+Primer comando ls -la
+
+Segundo comando cd inhere
+
+Tercer comando find -type f -size 1033c. Lo que hace este comando es buscar solo archivos no directorios
+que cumplan con el tamaño buscado. 
+
+Cuarto comando cat mybehere07/.file2
+
+Pasword: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+Nivel 6 -> 7 
+Primer comando: find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+Aqui el find / empieza a bucar desde la raiz, el -user bandit7 -group bandit6 -size 33c son los
+datos que nos proporciona el nivel. 
+
+La primera vez que lo ejecute me salieron un monton de mensajes de permisos denegados en la pantalla
+El 2>/dev/null lo que hace es redirigir esos mensajes a un archivo dev/null que tiene por defecto linux
+El 2 se utiliza porque los mensajes de error se catalogan como stderr el 1 son stdout
+
+Segundo comando: cat /var/lib/dpkg/info/bandit7.password
+
+Pasword: z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S

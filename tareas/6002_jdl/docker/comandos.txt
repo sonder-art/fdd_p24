@@ -33,5 +33,3 @@ docker rmi {imagen}
 docker build -t {nombre}:{tag}
 15:ejecutar una imagen
 docker exec -it {nombre}
-
-

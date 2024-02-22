@@ -17,6 +17,9 @@ Ahora combinados-> docker run -p Puertolocal:puertoDocker -d nombreDeLaImagen
 
 Si quieres nombrar tu contenedor -> docker run -d -pPuertolocal:puertoDocker --name nombreContenedor imagen:tag
 
+docker run -it -v /direccionLocal/:/direccionDockerFile nombre:tag /bin/bash
+Este comando sirve para debugear, juntas el local con el directorio del contenedor
+
 docker stop: Para los contenedores que tienes corriendo en un segundo plano
 
 docker start: Inicia de nuevo los contenedores que pusiste en stop
@@ -27,7 +30,7 @@ docker ps -a te muestra todos los contenedores que estan o no corriendo
 docker exec -it: Si quieres observar la configuracion del contenedor para checar las variables del ambiente 
 se usa este comando. El -it significa "interactive terminal" 
 
-docker exec -it nombre/id_del_contenedor bin/bash te habre una terminal de en bash
+docker exec -it nombre/id_del_contenedor /bin/bash te habre una terminal de en bash
 
 Adentro de esta terminal para imprimir las variables de ambiente se usa env
 

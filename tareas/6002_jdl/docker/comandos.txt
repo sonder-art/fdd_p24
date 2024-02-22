@@ -33,3 +33,5 @@ docker rmi {imagen}
 docker build -t {nombre}:{tag}
 15:ejecutar una imagen
 docker exec -it {nombre}
+16: entrar al docker, su terminal
+docker run -it {nombre} /bin/bash 

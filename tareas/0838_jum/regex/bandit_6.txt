@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Clave anterior:\
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU\
+\
+5 -> 6\
+du -ba | grep 1033\
+cat ./maybehere07/.file2\
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU\
+##al ver las especificaciones, pens\'e9 que eran pocos los documentos que fueran de justo 1033 bytes entonces usando el grep, busque los que tuvieran esa longitud y 
+solo me dio un archivo\
+\
+6-> 7\
+find / -user bandit7 -group bandit6 -size 33c\
+cat /var/lib/dpkg/info/bandit7.password\
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S\
+##Usamos el find para buscar todas las especificaciones que nos da el nivel y nos arroja un buen de archivos, en esa lista solo buscamos los que podamos acceder y lo 
+abrimos\
+\
+}

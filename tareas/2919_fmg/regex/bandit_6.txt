@@ -1,0 +1,66 @@
+Frida Márquez 
+
+1) Entar a Bantit5: Use el comando de la vez pasada pero con el usuario de Bantit5 y la ultima contraseña que encontré. 
+ 
+ 	ssh -p 2220 bantit5@bandit.labs.overthewire.org
+ 	lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+2) Bandit 5 --> Bandit6
+
+	bandit5@bandit:~$ pwd
+	/home/bandit5
+	bandit5@bandit:~$ ls -a
+	.  ..  .bash_logout  .bashrc  inhere  .profile
+	bandit5@bandit:~$ cd inhere/
+	bandit5@bandit:~/inhere$ ls -a
+	.            maybehere02  maybehere06  maybehere10  maybehere14  maybehere18
+	..           maybehere03  maybehere07  maybehere11  maybehere15  maybehere19
+	maybehere00  maybehere04  maybehere08  maybehere12  maybehere16
+	maybehere01  maybehere05  maybehere09  maybehere13  maybehere17
+	bandit5@bandit:~/inhere$ find . -type f -size 1033c
+	./maybehere07/.file2
+	bandit5@bandit:~/inhere$ cd maybehere07
+	bandit5@bandit:~/inhere/maybehere07$ ls
+	-file1  -file2  -file3  spaces file1  spaces file2  spaces file3
+	bandit5@bandit:~/inhere/maybehere07$ cat . file2
+	cat: .: Is a directory
+	cat: file2: No such file or directory
+	bandit5@bandit:~/inhere/maybehere07$ cat .file2
+	P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+
+3) Bandit6 -> Bandit7
+
+	bandit6@bandit:~$ pwd
+	/home/bandit6
+	bandit6@bandit:~$ ls -a
+	.  ..  .bash_logout  .bashrc  .profile
+	bandit6@bandit:~$ cd ..
+	bandit6@bandit:/home$ ls 
+	bandit0   bandit15  bandit21  bandit27-git  bandit30-git  bandit6    drifter12  drifter5     formulaone2  krypton4
+	bandit1   bandit16  bandit22  bandit28      bandit31      bandit7    drifter13  drifter6     formulaone3  krypton5
+	bandit10  bandit17  bandit23  bandit28-git  bandit31-git  bandit8    drifter14  drifter7     formulaone5  krypton6
+	bandit11  bandit18  bandit24  bandit29      bandit32      bandit9    drifter15  drifter8     formulaone6  krypton7
+	bandit12  bandit19  bandit25  bandit29-git  bandit33      drifter0   drifter2   drifter9     krypton1     ubuntu
+	bandit13  bandit2   bandit26  bandit3       bandit4       drifter1   drifter3   formulaone0  krypton2
+	bandit14  bandit20  bandit27  bandit30      bandit5       drifter10  drifter4   formulaone1  krypton3
+	bandit6@bandit:/home$ find -user bandit7 -group bandit6 -size 33c
+	find: ‘./bandit31-git’: Permission denied
+	find: ‘./drifter8/chroot’: Permission denied
+	find: ‘./drifter6/data’: Permission denied
+	find: ‘./bandit27-git’: Permission denied
+	find: ‘./bandit5/inhere’: Permission denied
+	find: ‘./bandit30-git’: Permission denied
+	find: ‘./bandit29-git’: Permission denied
+	find: ‘./bandit28-git’: Permission denied
+	find: ‘./ubuntu’: Permission denied
+	bandit6@bandit:/home$ find -user bandit7 -group bandit6 -size 33c 2>/dev/null
+	bandit6@bandit:/home$ cd ..
+	bandit6@bandit:/$ find -user bandit7 -group bandit6 -size 33c 2>/dev/null
+	./var/lib/dpkg/info/bandit7.password
+	bandit6@bandit:/$  cat ./var/lib/dpkg/info/bandit7.password                    
+	z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+
+
+
+

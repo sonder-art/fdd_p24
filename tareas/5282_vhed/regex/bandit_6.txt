@@ -1,0 +1,32 @@
+Level 5
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+ls
+#ver los archivos 
+cd inhere/
+#meterme a la carpeta
+ls
+ls -lah
+#ver los archivos de la carpeta, con tamaño y tipo
+Cd
+#regresar al inicio
+find inhere/ -size +1032c
+#buscar los documentos que tengan tamaño mayor a 1032 bytes
+find inhere/ -size 1033c
+#buscar los documentos que pesen exactamente 1033 bytes
+cd inhere/maybehere07
+#una vez lo encontré, me meto a esa carpeta
+cat ./.file2
+#leo el archivo 
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+
+Level 6
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+Ls
+Find / -user bandit7
+#buscar los archivos del usuario bandit7
+Find / -user bandit7 -group bandit6
+#buscar los archivos del usuario bandit7 y del grupo bandit6
+cat /var/lib/dpkg/info/bandit7.password
+#entre todos los archvios que me aparecieron, abro el único que parece apropiado 
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S

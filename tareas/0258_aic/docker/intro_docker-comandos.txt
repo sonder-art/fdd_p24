@@ -1,0 +1,24 @@
+Comandos de Docker
+
+1) docker pull imagen: podemos descargar imagenes que ya existen en Docker Hub con el pull. Es como un "download" para una imagen. 
+2) docker run imagen: genera un contenedor de la imagen que descargamos. 
+3) docker run imagen: version --> nos dará el comando pull de esa versión y el comando run a la vez 
+4) docker stop id/nombre: lo que hace es parar el contenedor que está corriendo. 
+5) docker start id/nombre: lo que hace es comenzar el contenedor (que empiece a correr). 
+6) docker ps: nos muestra todos los contenedores que están corriente en el momento. Nota: ps -a nos mostrara TODOS los contenedores, esten corriendo o no. 
+7) docker exec -it id/name /bin/bash : se utiliza para ejecutar comandos ( tener la terminal) dentro de un contenedor.
+Así pueden navegar los directorios y las cosas que tienes en el contenedor. Así puedes configurar cosas.  
+NOTA AL 7: para salirte de la terminal solo le das exit. 
+
+8) docker logs id/name: me permite ver los logs que ha tenido un contenedor. 
+9) docker images: nos da todas las imagenes que tenemos localmente. 
+10)docker run -p port: es para poner el puerto al que quieres que se dirija y donde quieres que venga. 
+11)docker run -d: en detach mode que nos permite utilizar la terminal 
+
+HACER UNA IMAGEN DESDE UN DOCKER FILE
+12) docker built -t version .(working directory): así se crea una imagen desde un dockerfile. 
+13)docker rmi id: para borrar una imagen (para eso necesitamos borrar los contenedores dentro).
+14) docker rm container: es para borrar un contenedor. Para borrarlo debes pararlo primero
+
+Según yo dijo que debían ser 16, pero ya me vi los videos y yo solo caché 13 nuevos + 1 que ya habíamos hablado en clase. 
+No sé cuales me faltaron, la verdad planeo ver en clase si vemos uno nuevo y ponerlo. 

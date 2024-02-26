@@ -1,0 +1,28 @@
+5-6
+- Entre al nivel 5 de bandit
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+- Segui poniendo la contraseña que me dio el nivel pasado 
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+- Use el comando ls para ver lo que había en el directorio 
+ls
+- Empece a buscar el archivo con lo que me decían las instrucciones, utilice 'find' para que empezara la búsqueda, después puse los parámetros: con '-find f', pedi que me buscara un archivo regular, no directorios ni archivos especiales. Con '-size 1033c' y '! -executable' pedi que buscara un archivo que fuera de 1033 bytes y que no fuera ejecutable, como las indicaciones de la página em decían
+find -type f -size 1033c ! -executable
+- Encontre la contraseña y la use para pasar al siguiente nivel
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+
+
+6-7
+- Entre al nivel 6 de bandit 
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+- Use la contraseña que encontre en el nivel anterior 
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+- Use el comando ls para saber que havia dentro del nivel 
+ls
+- Utilice el siguiente comando: 'find' para buscar archivos, '/-user bandit7' porque en las instrucciones nos decían que la contraseña era del dueño llamado bandit 7, '-group bandit6' porque de igual manera, las instrucciones decían que el archivo era del usuario bandit 6, por último, '-size33c' porque esta era la cantidad de bytes que tiene el archivo
+find / -user bandit7 -group bandit6 -size 33c
+- salió una lista en donde todos los archivos no tenían acceso, menos 1, entonces copie y pegue la dirección para poder usar 'cat' y poder leer lo que estaba en el archivo, la dirección es la siguiente: '/var/lib/dpkg/info/bandit7.password'
+cat /var/lib/dpkg/info/bandit7.password
+- Encontre la contraseña para pasar al nivel 7 
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+

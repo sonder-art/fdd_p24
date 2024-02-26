@@ -45,4 +45,5 @@ El (..+) captura los grupos
 Novena pregunta:
 ([aeio]).{5}\1
 Razonamiento: Vemos que las palabras de la derecha tienen cuatro vocales separadas cada una por 
-otras letras ([aeio]). considera el caracter vocal/otra letra {5} que se repita 4 veces \1 que al menos pase una vez
+otras letras ([aeio]). considera el caracter vocal/otra letra {5} que se repita 4 veces \1 que al menos pase una vezi 
+

@@ -1,0 +1,59 @@
+Docker 
+Victor Esparza 195282
+
+docker images
+#imágenes
+
+docker ps
+#running containers
+docker ps -a
+#containers, whether they are running or not 
+
+
+docker pull nombre:version
+
+
+docker run nombre:version
+#crea un contenedor de esa imagen
+docker run -d nombre:version
+#ejecutar el contenedor sin bloquear la terminal
+docker run -d -p hostport:containerport nombre:version
+#port binding 
+docker run --name (nombre que quiero) -d -p hostport:containerport nombre:version
+
+
+Control c
+#desbloquear la terminal 
+
+
+docker logs (id/ nombre container)
+#Ver logs del servicio corriendo dentro del contenedor
+
+
+docker stop (id/nombre - pueden ser varios)
+#stops one or more running containers
+
+
+docker start id
+#run a previously created container
+
+
+docker exec -it (container id/nombre) /bin/bash
+#navigate the container 
+exit
+#para salir
+
+
+#docker run vs docker start 
+#docker start no trabajas con imágenes, sino con contenedores 
+
+
+-------------
+
+
+Build an image 
+
+docker build -t (nombre:tag) .(#esto es la dirección) 
+
+docker rmi (image id)
+#deleting an image

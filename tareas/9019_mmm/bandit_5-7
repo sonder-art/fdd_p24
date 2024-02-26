@@ -1,0 +1,54 @@
+Level 5—>6
+
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+
+bandit5@bandit:~$ pwd
+/home/bandit5
+bandit5@bandit:~$ ls 
+inhere
+bandit5@bandit:~$ cd inhere
+bandit5@bandit:~/inhere$ ls
+maybehere00  maybehere04  maybehere08  maybehere12  maybehere16
+maybehere01  maybehere05  maybehere09  maybehere13  maybehere17
+maybehere02  maybehere06  maybehere10  maybehere14  maybehere18
+maybehere03  maybehere07  maybehere11  maybehere15  maybehere19
+bandit5@bandit:~/inhere$ ls -lah
+total 88K
+drwxr-x--- 22 root bandit5 4.0K Oct  5 06:19 .
+drwxr-xr-x  3 root root    4.0K Oct  5 06:19 ..
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere00
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere01
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere02
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere03
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere04
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere05
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere06
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere07
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere08
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere09
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere10
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere11
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere12
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere13
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere14
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere15
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere16
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere17
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere18
+drwxr-x---  2 root bandit5 4.0K Oct  5 06:19 maybehere19
+
+(Me puse a investigar sobre los parámetros del find)
+bandit5@bandit:~/inhere$ find -readable -size 1033c ! -executable
+./maybehere07/.file2
+bandit5@bandit:~/inhere$ cat ./maybehere07/.file2
+Password: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+Level 6 —> 7
+
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+
+(Tuve que googlear, no entiendo qué hace el “2>/dev/null”)
+bandit6@bandit:~$ find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+/var/lib/dpkg/info/bandit7.password
+bandit6@bandit:~$ cat /var/lib/dpkg/info/bandit7.password
+Password: z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S

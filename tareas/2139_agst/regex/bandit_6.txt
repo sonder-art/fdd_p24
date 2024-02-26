@@ -1,0 +1,18 @@
+Cabe aclarar que para ingresar a los niveles utilice el ./niveles_bandit.sh, para que fuera mas facil
+y viera que, de hecho, segui funcionando.
+
+Bandit Level 5 -> Level 6:
+
+Para este nivel primero me fui al inhere y liste todo lo que contenia. Eran muchas carpetas y cada
+una tenia carpetas y archivos, asi que buscar uno por uno no era una opcion.
+Del nivel anterior recorde que podia usar find, asi que me fui por ahi. investigue un poco de como
+podia encontrar el archivo segun las caracteristicas y era muy facil, aunque no encontre mucho de
+los archivos no ejecutables. Entonces procedi con find -type f -size 1033c, y con esto solo encontre un archivo
+que cumplia con lo requerido, asi que lo abri y encontre la respuesta.
+
+Bandit Level 6 -> Level 7:
+
+Parecido al nivel anterior, unicamente utilice find de la siguiente forma:
+find / -user bandit7 -group bandit6 -size 33c
+Al ingresarlo me arrojo muchos mensajes de Permission denied y una ruta con un archivo, al correr esa
+ruta con cat, encontre la contrasena: cat /var/lib/dpkg/info/bandit7.password

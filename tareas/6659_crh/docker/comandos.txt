@@ -1,0 +1,20 @@
+docker images -> imágenes descargadas
+docker ps -> Contenedores activos
+docker pull nginx: 1.23 -> descarga la imagen de esa versión específica
+docker pull nginx -> descarga la imagen de la versión más nueva
+docker run nginx: 1.23 -> hace pull y corre el contenedor
+docker run nginx -> corre la imagen
+docker run -d nginx: 1.23 -> da el ID del contenedor
+docker logs containerID -> ver los logs del contenedor
+docker stop containerID -> detiene el contenedor
+docker run -d -p 9000:80 nginx: 1.23 -> lo linkea con un puerto 
+docker ps -a -> Muestra todos los contenedores, inactivos también
+docker start containerID -> inicia el contenedor 
+docker run –name web-app -d -p 9000:80 nginx: 1.23 -> crea el contenedor con ese nombre
+docker logs web-app -> log con el nombre
+docker exec -t containerID /bin/bash -> abre una terminal interactiva
+en la terminal:
+	ls
+	pwd
+	cd
+

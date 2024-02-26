@@ -1,0 +1,36 @@
+Warmup: foo
+
+Anchors: ick$
+# $ indica el fin del patrón
+
+It never ends: fu\b
+# \b busca si antes hay un caracter, y despúes hay algo distinto (word boundary)
+
+Ranges: ^[a-f]*$
+# ^ Marca el comienzo del patrón
+# [a-f] es una lista de los posibles caracteres que pueden haber al inicio
+# * permite que se repitan indefinidamente
+# $ pide que una vez que ya no hayan caracteres [a-f], termine el patrón
+
+Backrefs: ^(...).*\1
+# ^(...) quiero comenzar con un patrón de cualesquiera tres caracteres
+# .* en medio pueden haber más caracteres o no
+# \1 pide que otra vez aparezcan los primeros tres
+
+Abba: (..)\1
+# (..)\1 busca que se repita un grupo de dos caracteres
+# Ahora tengo que negarlo, pero no descubrí como
+
+A man, a plan: ^(.)(.)(.)?.?\3\2\1$
+# ^ para que empiece con el palíndromo
+# $ para que termine con el palíndromo
+# (.)(.)\2\1 por que al menos debe de ser de cuatro letras
+# (.)?\3 por si hay un tercer par
+# .? de en medio por si es un número impar de letras
+
+Prime:
+# Ni idea
+
+Four: (a|e|i|o|u).*\1
+# Tampoco supe como hacerle para que se repitiera cierto número de veces el back ref
+

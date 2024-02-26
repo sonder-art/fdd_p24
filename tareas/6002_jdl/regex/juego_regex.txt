@@ -1,0 +1,87 @@
+cheatsheeet usada: https://cheatography.com/davechild/cheat-sheets/regular-expressions/
+
+1: que contenga algo
+foo
+#al poner foo hacemos que los matches sean las palabras que contengan foo
+—————————————————————————————————————————————————————————————————————————————————————————————————
+2: que acabe con
+k$
+#con el $ podemos decir que solo los que termina con el string anterior
+—————————————————————————————————————————————————————————————————————————————————————————————————
+3:que acabe con pero sin $
+u\b
+#\b es word boundry
+también se puede con:
+u(?!.)
+#(?!) es el negative look ahead, esto dice que u(?!.) dice que lo que siga de lo que matches con la u no puede ser 
+otra cosa, tiene que estar vacío
+—————————————————————————————————————————————————————————————————————————————————————————————————
+4:que tenga un cierto rango de letras
+[a-f]{4}
+#[a-f] dice el rango de letras el el {4} dice el numero de letras que tienen ese rango expoecífico
+—————————————————————————————————————————————————————————————————————————————————————————————————
+5:que tenga repetido un cierto string
+(...).*\1
+#nos damos cueta que todos repiten un cierto string con el que empiezan, el string mas corto es 3
+#por lo tanto agrupas los primero tres caracteres con (…)
+#.* esto encuentra aun match de lo anterior para que se repita
+#el /1 cuenta que lo que se contó con .* sea 1
+—————————————————————————————————————————————————————————————————————————————————————————————————
+6.no doble caracter
+#con la pista que nos dan nos damos cuenta que es parecido al anterior pero que no tenga un doble caracter
+#para que no se repita un carácter inmediatamente podemos utilizar ?!(.)+\1 esto busca que el siguiente  caracter no 
+sea igual al anterior
+#?! es el negative look ahead, (.) nos indica que selecciona un caracter, el \1 que esta búsqueda de uno, esto 
+garantiza que no haya un doble caracter, pero solo en el principio del sting
+#si agaregamos ^(?!(.)+\1) esto lo indica en el principio del strign y checa que en ninguna párate haya un doble 
+caracter
+#Sin embargo, corriendo esto nos faltan hacer dos matches: noisefull y effusive
+#ambos tienen ef entonces podemos agregar que hagan match los que tengan ef y ninguno de los no match tienen ef
+^(?!(.)+\1)|ef
+#el a|b permite que la condición a o b hagan match
+—————————————————————————————————————————————————————————————————————————————————————————————————
+7:palindromos
+#nos damos cuenta que los match son palíndromos
+#pero es más fácil que esto como ninguno de ellos matchers empiezan y terminan con la mis a letra menos uno podemos 
+hacer que match sea que la prima letra y la utima sean iguales
+^(.).*\1$
+#con ^ empezamos al principio del strign, (.) selecciona un caracter y */ lo matches con el final del strign, el \1 
+dice que este match tiene que ser 1 
+#esto nos da que la primera y la ultima letra sean iguales
+#Sin embargo porous también empieza y termina con la ultima letra entonces lo tenemos que quitar
+#el problema es que la palabra sporous no puede ser match, entonces tenemos que quitarla
+#nos damos cuenta que sporous tiene un p en su segunda lateras y ninguno de los matches tiene esta característica
+#entonces para quitar sporous seria ^(.)[^p] y esto es la palabras que comienzan con cualquier caracter y que el 
+segundo caracter no es “p”
+#juntando ambas condiciones
+^(.)[^p].*\1$
+—————————————————————————————————————————————————————————————————————————————————————————————————
+8. que n de xs sea primo
+#por la pista del ejercicio nos damos cuenta que el numero de x tiene que ser primo
+#para que sea primo tenemos que revisar que no exista un numero n que pueda ser sumado m veces para que de ese numero
+#como loscaracteres están formador por puras x podemos hacer lo siguiente
+^(?!(xx+)\1+$)
+#(xx+) representa el numero n y  \1+ representa el numero m
+#?! se asegura que no exista esta conminación de n x y m repeticiones de estas n x
+#^ nos funciona para que empiece a agarrar las x desde el principio del string y $ para que las vaya comparando con 
+el subgrupo de n (x) al final del string
+#empoieza buscando si xx + xx +xx +…. y así pueden completar tu número
+#si no puede se sigue con xxx + xxx +xxx +…. así hasta que pueda completar tu numero
+#y así lo hace hasta  ante tar todos los componentes posibles
+
+—————————————————————————————————————————————————————————————————————————————————————————————————
+9. que algún caracter se repita 4 o más veces
+#al principio parece que con que algún caracter se repita 4 veces ya está, pero esto es más díficil de lo que parece
+#nos tenemos que dar cuenta que todos los matches tienen las letras separadas por otra letra 
+#este patron lo podemos conseguir con lo siguiente
+(.)(.\1)
+#este regex matches con cualquier string que tenga un string de la forma (caracter deseado)(otro cvaracrte)(caracter 
+deseado) creo que es lo mismo que esto [caracter deseado](.)[caracter deseado], pero (.)(.\1) lo corre para todos, no 
+puedes hacer [a-z](.)[a-z] porque es lo mismo que (.)(.)(.)
+#el (.\1) es una backreference matchea a lo que tienes en el (.) con el (.\1) dentro del paréntesis
+#por ejemplo (.)(k\1) significa (caracter deseado)(k)(caracter deseado) el \1 busca que los caracteres matches, no es 
+lo mismo que (.)(k)(.) ya que esto podría ser algo como akb el \1 hace que el tercer carácter tenga que ser igual al 
+primero
+#ya con eso podemos hacer que este patron se repita tres veces con {3}
+(.)(.\1){3}
+

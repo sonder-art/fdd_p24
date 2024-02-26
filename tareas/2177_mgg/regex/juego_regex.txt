@@ -1,0 +1,9 @@
+\w*foo\w*
+\w*ick\b
+\w*fu\b
+^[abcdef]+$
+\b(?!anticker|corundum|crabcatcher|damnably|foxtailed|galvanotactic|gummage|gurniad|hypergoddess|kashga|nonimitative|parsonage|pouchlike|presumptuously|pylar|rachioparalysis|scherzando|swayed|unbridledness|unupbraidingly|wellside)\w*[^gkmqwz]\w*\b
+\w*^(?!.*(\w)\1)\w+
+\b(\w)(\w?)(\w?)(\w?)(\w?)(\w?)(\w?)\6\5\4\3\2\1\b
+^x{2,}(?:x{3}){0,}\.{3,}x{2}
+\b\w*(\w)(\w)\w*\1\2\w*\b

@@ -1,0 +1,40 @@
+foo
+## utilizamos simplemente la palabra que quermos que este en los caracteres aceptados, en este caso es foo, como puede estar en cualquier parte de la palabra no 
+tenemos 
+que agregar ninguna otra cosa 
+
+ick$
+## Para el nivel "anchors" vemos que todas las palabras acaban con 'ick' entoses usamos esos tres caracteres seguidos por el signo de dolares que ondoca que la cadena 
+que pusimos tiene que estar al final de la plabra 
+
+\b[^zlc]+\b
+## para el nivel 'it never ends', como no podemos usar $ para decir que la palabra termine en 'fu', usamos los corchetes y la flechita pa arriba, para decir que no se 
+puedan usar los caracteres que estan en las palabras que no queremos y no estan en las que si queremos
+
+\b[abcdef]+\b
+## en el nivel 'Rangers' todos los caracteres que queremos acdeptar estan compuestos de las letras abcedef, entonces solo ponemos entre los corchetes que quermos que 
+esten incluidos 
+
+^(...).*\1
+## para el nivel 'backrefs' usmaos el caracter anterior para buscar patrones en los caracteres, usamos ^ para ponernos en el principo de la cadena, (...) para que 
+busque un patron en este caso de tres caracteres, .* este simbolo permite que entre las repeticones de los caracteres exista cualquier combinacion de caracteres y para 
+terminar, \1 es para que los caracteres coincidan con la primera regla que pusimos, que es la de los parentesis con los tres puntitos 
+
+^(?!.*(.)(.)\2\1)
+## en 'abba' usamos negative lookahead que hace que no se puedan repetir patrones invertidos, usmaos lso parentesis para englobar todo lo que vamos a condicionar, ?! es 
+el inicio de nuestro negative lookahead, depsues ponemos el .* para que pueda haber los que ese despues de los patrones que buscamos, (.)(.) es para guardar dos 
+caracteres por seprado, y seguido los \2\1 hace que el patron se tenga que repetir al reves 
+
+^(.)(.).*\2\1$
+## en 'a man a plan' al igual que en el anterios tenemos dos parentesis que guardan dos caracteres por separado, usamos el punto y el asterisco para que pueda haber 
+cualquier cosas entre ellos y con el 2 y 1 solo hacemos que el patron se tenga que repetir al reves. que la palabra se pueda leer de la misma manera de incio a fin y al 
+reves
+
+^(?!(xx+)\1+$)
+en 'prime' usamos igual lo de las negative lookahead solo que como estamos buscando las seguncias con la cantidad de x primas usamos el xx+ hace que se excluyan todas 
+las cadenas de dos o mas x asi solo deja las cadenas que solo se podrinan dividir entre ellas mismas 
+
+(.)(.\1){3}
+en 'four' lo que queremos hacer es buscar una cadena que tenga un caracter repetido tres veces y que entre cada repeticion exista solo otro caracter que los separe, de 
+esta forma, con el (.) guardamos el caracter que queremos que se repita, con el (.\1) hacemos que antes de ese caracter haya un caracter '.' y despues con el {3} 
+hacemos que esto se repita tres veces

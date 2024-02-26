@@ -1,0 +1,27 @@
+Comandos para usar docker:
+
+Docker file:
+
+	1) FROM *algo* -> instalas algo en tu contenedor para poder usarlo desde que lo creas 
+	2) ENV algo_USERNAME=admin \
+		algoPSW=pasword -> crea un virtual enviroment 
+	3) RUN *algo* ->se usa para que puedas correr comandos 
+	4) COPY *file path* -> copia algo de otro lado 
+	5) CMD *comando* -> hace un comando de linux
+
+
+docker build -T mi_nombre:version-1 .path del Dockerfile -> crear una imagen 
+docker images -> vemos las imagenes que tenemos 
+docker run ni_nombre:verison-1 -> hace un contenedor para la imagen
+docker exec -it *container_id* -> abres una terminal del docker
+docker stop -> detiene el contenedor 
+docker rm *container id*
+docker rmi *image_id*
+
+
+docker pull -> Este comando se utiliza para descargar una imagen de Docker de internet
+docker run -> Crea y arranca un contenedor a partir de una imagen
+docker stop -> Detiene uno o más contenedores en ejecución
+docker start -> Reinicia contenedores detenidos.
+docker ps -> Muestra los contenedores en ejecución
+docker log -> Este comando se utiliza para obtener los logs de un contenedor.

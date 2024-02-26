@@ -1,0 +1,14 @@
+1) docker pull: Descarga una imagen previamente existente desde el Docker Hub.
+2) docker build: Construye una nueva imagen a partir de un archivo Dockerfile y otros recursos locales.
+3) docker push: Sube una imagen local a un registro en línea para que esté disponible para otros usuarios.
+4) docker images: Muestra una lista de todas las imágenes que están almacenadas localmente en tu sistema Docker.
+5) docker rmi: Elimina una o varias imágenes Docker del sistema local.
+6) docker volume ls: Lista todos los volúmenes de Docker disponibles en el sistema.
+7) docker run: Crea y ejecuta un nuevo contenedor basado en una imagen Docker especificada.
+8) docker ps (-a): Muestra una lista de todos los contenedores en ejecución, y opcionalmente, los contenedores detenidos.
+9) docker stop: Detiene uno o varios contenedores en ejecución de acuerdo a los identificadores proporcionados.
+10) docker start: Inicia uno o varios contenedores que están actualmente detenidos.
+11) docker rm: Elimina uno o varios contenedores, eliminando su estado y recursos asociados.
+12) docker exec: Ejecuta un comando dentro de un contenedor Docker que ya está en ejecución.
+13) docker logs: Permite ver los registros generados por un contenedor específico.
+14) docker run -p [puerto]: Indica a Docker que redirija el tráfico a un puerto específico dentro del contenedor.

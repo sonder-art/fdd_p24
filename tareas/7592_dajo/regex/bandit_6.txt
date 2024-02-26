@@ -1,0 +1,86 @@
+David Anthoan Juárez Ortiz NC:197592
+
+Level 0
+ssh bandit0@bandit.labs.overthewire.org -p 2220 
+# ssh para conectarse a un servidor remoto en la dirección bandit.labs.overthewire.org en el puerto 2220 con el nombre de usuario bandit0 
+
+Level 1
+l
+#para ver la lista de archivos directorios que ha y en home
+cat readme
+# para ver la contraseña dentro del archivo
+exit
+# para salir del servidor 
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+# para entrar a bandit1 y ponemos la contraseña NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+Level 2
+pwd /home/bandit1
+# para ver que estamos en el directorio 
+cat /home/bandit1/-
+# dado que el nombre del archivo es una carácter, accedemos a el  estableciendo toda la ruta de los directorios hasta el nombre del archivo 
+exit
+# para salir de bandit1
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+# para entrar a bandit2 con la contraseña rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+
+Level 3
+l
+# para ver los archvos existentes, aquí encontramos el archivo ‘spaces in this filename'
+cat 'spaces in this filename'
+# dado que el nombre del archivo contiene espacios usamos apóstrofos para referirnos al nombre del archivo 
+exit
+# para salir de bandit2
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+# para entrar a bandit3 con la contraseña aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+lv4
+2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+
+
+
+Level 4
+l
+# para ver los dierecotrios y encontramos inhere/
+cd inhere/
+para entrar al directorio /inhere
+ls -a
+# para listar los archivos ocultos, aquí encontramos .hidden
+cat .hidden
+# para ver la contraseña del archivo 
+exit
+# para salir de bandit3
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+# para entrar a bandit4 con la contraseña 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+Level 4
+l
+# para ver los dierecotrios y encontramos inhere/
+cd inhere/
+para entrar al directorio /inhere
+ls -l
+# para listar los archivos aquí encontramos 10 archivos 
+find . -type f -exec file {} + | grep text
+# find . inicia la búsqueda en el directorio actual. -type f: restringe la búsqueda a archivos regulares (no directorios, enlaces simbólicos u otros tipos de archivos). -exec file {} + ejecuta el comando file en cada archivo encontrado. {} se sustituye por el nombre del archivo actual y + indica que múltiples nombres de archivos pueden ser pasados al comando file a la vez.| toma la salida del comando anterior y la pasa como entrada al siguiente comando. grep text filtra las líneas que contienen la palabra "text". grep es un comando que busca patrones en el texto, y en este caso, está buscando la palabra "text" en la salida del comando file. Despues de lo anterior tenemos como resultado ./-file07: ASCII text. ASCII text:  esto es lo que file ha identificado como el tipo de contenido del archivo. En este caso, indica que el contenido del archivo es de tipo "ASCII text".
+cat -- -file07
+# para ver la contraseña del archivo, el guion al principio puede ser interpretado como una opción del comando cat. Para evitar esto, puedes usamos – antes de -file07
+exit
+# para salir de bandit4
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+# para entrar a bandit5 con la contraseña lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+
+Level 5 a6
+# parados en el directorio /inhere, aplicamos la busqueda en archivos tuipo file (f), huma-readable, not executable de ttamaño 1033bytes 
+find -type f -readable ! -executable -size 1033c
+# obtenemos ./maybehere07/.file2
+ cat .file2
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+Level 6 a 7
+#la busqueda se realizara en todo el servidos (/), solo se aplicara la busqueda al tipo file (f), con user bandit7, group bandit6, con un tamaño de 33bytes y sin mostrar mensajes de error (2>/dev/null)
+find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+# se obtiene /var/lib/dpkg/info/bandit7.password
+#cat /var/lib/dpkg/info/bandit7.password para extraer la contraseña que es :
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S

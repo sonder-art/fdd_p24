@@ -1,0 +1,18 @@
+Comandos:
+
+1) docker pull request: sirve para descargar una imagen ya existente en el Docker Hub.
+2) docker run: crea un contenedor con la imagen.
+3) docker build: construye una imagen desde un registro.
+4) docker push: sube una imagen a un registro.
+5) docker images: lista todas las imagenes disponibles de manera local.
+6) docker rmi: sirve para eliminar imagenes(una o mas).
+7) docker ps (-a): lista todos los contenedores en ejecucion (el -a sirve para los detenidos).
+8) docker stop: detiene los contenedores indicados.
+9) docker start: inicia los contenedores indicados.
+10) docker rm: elimina los contenedores indicados.
+11) docker exec: ejecuta un comando en un contenedor que se encuentra en ejecucion.
+12) docker logs: me permite ver los logs de cierto contenedor.
+13) docker volume ls: lista los volumenes de Docker.
+14) docker run -p [port]: asi le indicas a Docker el puerto al que quieres que se dirija.
+
+La verdad no encontre mas comandos, rasque muchos de la clase con Skalas.

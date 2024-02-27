@@ -1,1 +1,1 @@
-https://hub.docker.com/u/lvarega
+https://hub.docker.com/repositories/lvarega

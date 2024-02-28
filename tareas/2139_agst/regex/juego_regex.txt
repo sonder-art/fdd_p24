@@ -1,0 +1,40 @@
+Warmup:
+ - Pide unicamente que cuente con la sucesion de caracteres foo
+
+Anchors: 
+ - Aqui utilizamos el caracter especial $ al final(especifica el final de la linea)
+
+It never ends:
+ - Como no se podia utilizar $, intente con ?! y si jalo
+
+Ranges:
+ - Aqui tarde un poco en encontrar el patron, pero al final me di cuenta que solo se aceptan
+   las palabras que contienen {a,b,c,d,e,f} y unicamente esas. Por lo tanto, el regex fue ^[abcdfe]*$
+
+Backrefs:
+ - La secuencia en este nivel fue un horror. El nombre del nivel me dio una pista de que hacer, pero no tenia muy claro
+   como hacerlo. Como tenia que referenciar algo de la misma cadena, las fui separando y me di cuenta que
+   la misma secuencia de tres caracteres del inicio de la cadena se repetia despues, por lo que guarde en una variable
+   temporal la primera subcadena de tres caracteres y la condicion era que esa subcadena se repitiera.
+
+Abba:
+ - En este nivel me saco canas. Pude encontrar la solucion viendo las no aceptadas, y vi que lo necesario era que no
+   hubieran caracteres repetidos inmediatamente. Sin embargo, dos de las aceptadas tenian esa caracteristica, por lo que tuve que poner
+   un OR que me aceptara o la condicion anterior o que tuviera "ef", pues asi funcionaba: ^(?!(.)+\1)|ef
+
+A man, a plan:
+ - Aqui vemos facilmente que las palabras admitidas son aquellas que empiezan con cualquier caracter y terminan con ese mismo. Sin embargo,
+   tambien tenemos que "sporous" cumple con esto, pero es una palabra no admitida. Por lo tanto, basta con agregarle a la primera 
+   indicacion que la segunda letra de la palabra no puede ser "p", teniendo asi: ^(.)[^p].*\1$ 
+
+Prime:
+ - Honestamente, para este nivel tuve que hacer trampa. Investigue un poco y me di cuenta de que las expresiones regulares tienen muchas limitantes,
+   como el no saber contar la longitud de la cadena y, mas importante en este caso, no poder identificar cuando dichas longitudes son primas.
+   Por lo tanto, al investigar un poco, me di cuenta que era necesario utilizar una tecnica llamada "negative lookahead".
+   La sintaxis de un "negative lookahead" es (?![pattern]), donde [pattern] es el patrón que no queremos encontrar justo después de la posición actual en la cadena.
+   Llegando asi al siguiente regex: ^(?!(xx+)\1+$)
+
+Four:
+ - Vemos aqui que el patron esta un poco escondido. Se nos pide que las palabras admitidas sean aquellas en las que se repite el mismo caracter 4 veces, separadas
+   por cualquier otro caracter. Mi duda aqui es si "aaaaaaa" seria una cadena admitida, pero segun yo no. Teniendo asi el siguiente regex: (.)(.\1){3}
+

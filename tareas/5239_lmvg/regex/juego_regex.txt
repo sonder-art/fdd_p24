@@ -1,0 +1,48 @@
+1. warmup: foo
+Observamos que el patrón es que todas las palabras tienen ‘foo’ entonces, podemos poner en regex ‘foo’ para que clasifique si encuentra este patron en la palabra
+
+2. Anchors: ick$
+Todas las palabras terminaban con ick, entonces en la expresión, puse un $ para que solo tomara en cuenta el final 
+
+3. It never ends: fu\b
+‘fu’ lo use para que coincidieras las palabras que tienen estas letras en el mismo orden 
+Después usa ‘\b’ que indica que debe de estar en el borde de la palabra. 
+Ósea, solo si ‘fu’ esta en el borde de la palabra se clasifica 
+
+4. Ranges: ^[^g-z]+$
+Ponemos ^para empezar a analizar desde el principio de la cadena. 
+Después ponemos [^g-z], nos indica que la palabra tiene que empezar con cualquier letra que no este desde la g hasta la z 
++$ nos indica que se puede repetir el patron (ósea, no hay letras que estan desde la g hasta la z) al final de la palabra 
+
+5. Backrefs: ([a-z]{3})[a-z]*\1[a-z]*
+Los primeros paréntesis dicen que tomemos los primeros 3 caracteres de la palabra 
+El segundo corchete nos dice otra vez que puede ser cualquier letra del abecedario y el asterisco nos dice que se puede repetir entre si o cero veces o mas.
+La diagonal y los últimos corchetes nos dice que se tiene que repetir lo que sale en las primeras 3 letras 
+Los últimos corchetes nos dicen otra vez que se tiene que repetir las primeras 3 letras que se encontraron al principio 
+
+6. Abba: ^(?!.*([a-z])([a-z])\2\1)
+Buscamos que no haya letras repetidas seguidas que sean iguales  
+^: Para que coincida la palabra empezamos buscando desde el principio
+?!: con esta parte de la expresión le decimos a regex que lo que este dentro del paréntesis no coincida. 
+*: nos dice que puede haber repeticiones 
+([a-z])([a-z]): tiene que haber 2 letras segiodas 
+\2\1: el 2 se refiere a la segunda letra, el 1 a la primera
+
+7. A man, a plan:  ^[a-z]$|^([a-z])([a-z])[a-z]?\2\1$|^([a-z])([a-z])([a-z])[a-z]?\5\4\3$
+Las palabras se leen igual de izquierda a derecha
+^[a-z]$: debe de haber una letra minúscula al inicio o final de la palabra 
+|^([a-z])([a-z])[a-z]?\2\1$: tomando 3 letras, la primera y la última letra son iguales y la segunda letra es diferente
+|^([a-z])([a-z])([a-z])[a-z]?\5\4\3$: ahora tomamos 4 letras y la primera y la última son iguales y las dos letras de en medio son iguales. 
+
+8. Prime:  ^(?!(xx+)\1+$)
+Queremos que no se repita la letra X en muchas repeticiones seguidas. 
+^: empezamos desde el inicio
+?!: volvemos a usar la negación, ósea, que no se encuentre en la palabra
+(xx+): nos dice que coincida 2 o más veces la x seguida 
+\1+: nos indica las coincidencias de las repeticiones de lo anterior
+$: nos ayuda a concentrarnos en el final de la cadea
+
+9. Four: (\w).\1.\1.\1
+Queremos que la expresión coincida con repeticiones de 4 caracteres consecutivos 
+(\w): nos dice que podemos elegir cualquier carácter de la palabra
+.\1: el la coincidencia de cualquier carácter seguido, ósea que se repita, en ese caso, lo ponemos 4 veces

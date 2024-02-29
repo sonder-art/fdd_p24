@@ -1,52 +1,55 @@
-# .gitignore
-Algunos ambientes virtuales como `pyenv` pueden crear carpetas, asegurate de no subir estas carpetas. Esto lo puedes lograr omitiendo el add a estas careptas y aregandolas al .gitignore.  
-No se aceptaras tareas que traigan archivos binarios de python, solo debe subirse le codigo.  
-Crea tu `.gitignore` en esta carpeta o a nivel de tu carpeta de tareas, verifica como funciona el wild card notation para lograr que aplique a todas tus subcarpetas.
+# Virtualenv
+Debes crear un virtualenv en tu local siguiendo las siguientes instrucciones. Investiga las instrucciones y adaptalas al repositorio actual. 
 
-# Pyenv
+## Ejercicio
+Crea un pyenv para este repo y anota las instrucciones en formato de codigo de markdown en este README (abajo), tanto para instalar el env como para activarlo. La idea es que si se te olvida o alguien mas descarga este repo puedas copiar y pegarlas sin ningun problema. No hagas `add` o `commit` por que falta crear los `ignores` (instrucciones mas adelante).  
 
-## Instrucciones para utilizar requirements.txt con .venv
-1. Creación del ambiente virtual 
-Para crear un ambiente virtual llamado .venv en el directorio actual:  
-`python -m venv .venv`
+Para asegurarte que funciono correctamente debe ser capaz de ejecutar `python app.py` sin problemas.
 
-2. Activar el ambiente virtual  
-Dependiendo de tu sistema operativo, usa uno de los siguientes comandos:  
-Linux/Mac  
-`source .venv/bin/activate`  
-Windows (cmd.exe):    
-`.venv\Scripts\activate.bat`  
-
-3. Instalar paquetes desde `requirements.txt`  
-Si tienes un archivo requirements.txt en tu directorio actual (o un archivo equivalente), puedes instalar todas las dependencias especificadas en ese archivo con:  
-`pip install -r requirements.txt`  
-
-4. Guardar paquetes en requirements.txt
-Si instalaste paquetes adicionales y quieres guardar esos paquetes y sus versiones en requirements.txt, puedes hacerlo con:  
-`pip freeze > requirements.txt`  
-
-5. Desactivar el ambiente virtual:  
-Cuando hayas terminado de trabajar en tu ambiente virtual, puedes desactivarlo con:  
-`deactivate`
+### Instrucciones
+#### Instalacion
+`pip install ....`
+#### Activar virtualenv
+`activate .... `
 
 # Conda
-Estas instrucciones guiarán a los estudiantes en la creación y activación de un ambiente Conda utilizando un archivo `environment.yml.`
+Instrucciones para crear un ambiente de conda `environment.yml.` Adapta las instrucciones al repositorio actual, no son exactas.
 
-1. Creacion de ambiente de Conda
-Para crear un ambiente con Conda basado en un archivo `environment.yml` presente en tu directorio actual:  
-`conda env create -f environment.yml`  
-El nombre del ambiente será el que se definió dentro del archivo environment.yml bajo la clave name. Nota que nuestro archivo no tiene este elemento, puedes agregarlo o buscar como pasarlo como comando de terminal.  
+## Ejercicio
+Crea un conda env para este repo y anota las instrucciones en formato de codigo de markdown en este README (abajo), tanto para instalar el env como para activarlo. La idea es que si se te olvida o alguien mas descarga este repo puedas copiar y pegarlas sin ningun problema. No hagas `add` o `commit` por que falta crear los `ignores` (instrucciones mas adelante).  
 
-2. Activar el ambiente Conda:  
-Para activar el ambiente que acabas de crear:  
-`conda activate nombre_del_ambiente`  
-Reemplaza nombre_del_ambiente con el nombre que definiste en el archivo environment.yml.   
-Una vez activado, el nombre del ambiente aparecerá al inicio de la línea de comando.  
+Para asegurarte que funciono correctamente debe ser capaz de ejecutar `python app.py` sin problemas.
 
-3. Desactivar el ambiente Conda:  
-Cuando hayas terminado de trabajar en tu ambiente Conda, puedes desactivarlo con:  
-`conda deactivate`  
 
-4. Exportar el ambiente a un archivo environment.yml:  
-Si realizaste cambios en el ambiente, como instalar paquetes adicionales, y quieres reflejar esos cambios en el archivo environment.yml, puedes hacerlo con:  
-`conda env export > environment.yml`
+### Instrucciones
+#### Instalacion
+`conda  ....`
+#### Activar conda env
+`activate .... `
+
+
+# .gitignore
+Algunos ambientes virtuales como `pyenv` pueden crear carpetas, asegurate de no subir estas carpetas. Esto lo puedes lograr omitiendo el add a estas careptas y aregandolas al .gitignore.  
+No se aceptaran tareas que traigan archivos binarios de python, solo debe subirse el codigo. Tambien debe evitarse subir tus archivos `.env` o claves en general por ello es necesario incluir estos archivos en el gitignore, pero agregar un ejemplo al github para que se pueda replicar en el local en este caso lo llamos `.env_ejemplo`.
+
+## Ejercicio
+Crea tu `.gitignore` en tu copia de esta carpeta en tu folder de tareas verifica como funciona el wild card notation para lograr que aplique a todas tus subcarpetas.
+*Tienes que investigar, inferir, googlear que carpetas son creadas para agregarlas al .gitignore*
+Asegurate de agregar todas las cosas necesarias a tu `.gitignore` para que no suba archivos de los envs de python ni de conda a github
+
+# .dockerignore
+Igual que git, docker tiene su archivo .gitignore. Y dado que el punto de construir `build` un contenedor es hacer replicable todo dentro del mismo por lo que copiar estos archivos es mala practica por que peude provocar errores o aumentar la memoria.  Por lo mismo es necesario crear un  `.dockerignore`
+## Ejercicio
+Crea tu `.gitignore` en tu copia de esta carpeta en tu folder de tareas verifica como funciona el wild card notation para lograr que aplique a todas tus subcarpetas.
+*Tienes que investigar, inferir, googlear que carpetas son creadas para agregarlas al .dockerignore*
+Asegurate de agregar todas las cosas necesarias a tu `.gitignore` para que no suba archivos de los envs de python ni de conda a tu imagen de dockerhub.
+
+# Docker
+Ahora tienes que crear un docker que utilice `virtualenv` (no pipenv sino virtual env) para instalar los paquetes. Modifica el `Dockerfile.ejemplo` para que instale las cosas correspondientes y pueda ejecutar `python app.py` sin problemas.  
+
+# Entrega de Ejercicios
+Una vez que esten los ejercicios listos, sube tu imagen de docker a tu repositorio de docker hub y agrega la liga de ese contenedor aqui:  
+## Docker
+[liga de docker](url)  
+## Github
+Pide un pull request con las modificaciones necesarias.

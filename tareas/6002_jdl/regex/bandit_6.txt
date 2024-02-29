@@ -1,0 +1,23 @@
+5: búsqueda avanzazada
+pw:lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+# aplicamos un find para que nuestro archivo tenga los criterios que estamos buscando , el size nos dice que el file 
+tiene que tener 1033 bytes el ! executable que no sea ejecutable 
+find /home/bandit5/inhere -type f -size 1033c ! -executable -exec ls -lh {} \;
+#esto nos arroja los files que tengan estos criterios
+cat /home/bandit5/inhere/maybehere07/.file2
+pw:P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+—————————————————————————————————————————————————————————————————————————————————————————————————
+6:busqueda y permisos
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+#aplicamos un find para ver que nuestro archivo tenga de owner bandit7 y de grupo bandi6 y que el size sea 33c 
+find / -type f -user bandit7 -group bandit6 -size 33c
+#esto nos da un problema de permisos entonces le tenemos que meter  2>/dev/null
+#esto lo utilizamos para que no sea vea el error de permisos y podamos acceder a la búsqueda que realizamos 
+
+find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+cat /var/lib/dpkg/info/bandit7.password
+pw: z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+
+—————————————————————————————————————————————————————————————————————————————————————————————————
+

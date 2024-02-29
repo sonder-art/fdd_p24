@@ -1,0 +1,38 @@
+Nivel, regex y al final que hace
+
+1. Warmup: foo 
+	a.foo: busca a los que tengan foo
+2. Anchors: ick$ 
+	a. ick$: Busca los que terminen con ick
+3. It never ends: fu\b 
+	a. fu\b: Busca que su límite sea fu
+4. Ranges: ^[a-f]*$ 
+	a. que inicie con ^[a-f]
+	b. que se repitan estas letras 
+	c. $: que termine con estas letras
+
+A partir de aquí me apoyé en los videos y en tutoriales porque me rendí lol:
+
+5. Back refs: ^(...).*\1 
+	a. ^(...) Incia con tres caracteres
+ 	b. .* seguidos van caracteres random y ocurrencias
+	c. \1 se repiten los caracteres iniciales
+6. Abba: ^(?!(.)+\1)|ef 
+	a. ^(?!(.)+\1): no se repitan caracteres seguido
+	b. |: o 
+	c. 'ef': que tengan 'ef' 
+7. A man a plan: ^(.)[^p].*\1$
+	a. ^(.): Busca que inice con cualquier caracter^(.)
+	b. [^p]: que el resto no tenga p
+	c. .*:  repeticiones de cualquier caracter .*
+	d. \1$ que termine con el mismo caracter que con el que inicio 
+8. Prime: ^(?!(xx+)\1+$)
+	a. ^(?!(xx+)\1+$): checa que no haya repeticiones de una subcadena de x´s
+	b. xx+ checa la repiticion de x en un grupo
+	c. \1+$ checa que se repita una o mas veces hasta el final
+	d. ?! es la negación
+	e. ^ que incia
+Four: (.)(.\1){3}
+	a.Ve el primer caracter(.)
+	b. (.\1){3}luego checa el segundo, tercero y cuarto y ve que se repitan en la palabra
+

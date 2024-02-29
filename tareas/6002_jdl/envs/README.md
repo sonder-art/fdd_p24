@@ -9,8 +9,12 @@ Para asegurarte que funciono correctamente debe ser capaz de ejecutar `python ap
 ### Instrucciones
 #### Instalacion
 `pip install ....`
+`pip install virtualenv`
+#### crear virtualenv
+`virtualenv venv1`
 #### Activar virtualenv
 `activate .... `
+`source venv1/bin/activate`
 
 # Conda
 Instrucciones para crear un ambiente de conda `environment.yml.` Adapta las instrucciones al repositorio actual, no son exactas.
@@ -24,9 +28,10 @@ Para asegurarte que funciono correctamente debe ser capaz de ejecutar `python ap
 ### Instrucciones
 #### Instalacion
 `conda  ....`
+`conda create --name condaenv python=3.12`
+decir la version o 3.x si no sw necesita una version
 #### Activar conda env
-`activate .... `
-
+`connda activate condaenv`
 
 # .gitignore
 Algunos ambientes virtuales como `pyenv` pueden crear carpetas, asegurate de no subir estas carpetas. Esto lo puedes lograr omitiendo el add a estas careptas y aregandolas al .gitignore.  

@@ -1,0 +1,10 @@
+Respuestas para el juego de regex
+Warmup: foo # Las palabras que contengan foo
+Anchors: ick$ # Las palabras que tengan ick y luego tengan salto de línea
+It never ends: fu\b # fu y luego el límite de una palabra
+Ranges: ^[abcdf][abcde][^an]|abac|bead|dead # Las primeras pero tuve que incluir unas que me faltaron
+Backrefs: \b\w*(\w{3})\w*\1\w*\b # Inicio de palabra, cualquier cantidad de caracteres, un grupo de 3 letras, caracteres, el mismo grupo, caracteres y luego el fin de la palabra.
+Abba: ^(?!(.)+\1)|ef 
+A man, a plan: ^(.)[^p].*\1$
+Prime: ^(?!(xx+)\1+$)
+Four: ^(?!(..+)(\1)+$) 

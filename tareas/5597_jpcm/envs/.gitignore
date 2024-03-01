@@ -19,6 +19,6 @@ Thumbs.db
 
 # Environment variables
 .env
-
+.env_ejemplo
 # Conda environment
 conda_env/

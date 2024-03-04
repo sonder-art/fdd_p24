@@ -1,0 +1,26 @@
+            --DOCKER INTRO--
+    --CHEATSHEET DE COMANDOS DE DOCKER--
+
+  COMANDOS DE DOCKERFILE
+FROM: Utilizado para especificar la imagen base para el Dockerfile.
+COPY: Utilizado para copiar archivos desde el host al contenedor.
+WORKDIR: Utilizado para cambiar el directorio de trabajo (en el contenedor).
+RUN: Utilizado para ejecutar comandos de Bash en la terminal del contenedor.
+CMD: Similar a RUN, pero se utiliza para ejecutables, y solo puede haber uno por Dockerfile, que debe ir al final.
+ENV: Permite definir variables para el ambiente.
+
+  COMANDOS DE DOCKER
+pull: Obtiene la imagen especificada de DockerHub
+run: Crea un contenedor a partir de una imagen.
+run --options:
+    -p[puerto local]:[puerto del contenedor]: Asigna un puerto del contenedor a un puerto local.
+    -d: No corre el contenedor en la terminal (sólo imprime el ID).
+    -it: Modo interactivo.
+    --name: Permite especificar el nombre del contenedor.
+stop: Detiene un contenedor.
+start: Inicia un contenedor detenido (ya existente).
+ps: Muestra los contenedores activos (con -a muestra también los inactivos).
+exec -it: Nos manda a la terminal del contenedor especificado, en modo interactivo.
+logs: Muestra los registros producidos por el contenedor especificado.
+images: Muestra todas las imágenes locales.
+build: Construye una imagen a partir de un Dockerfile.

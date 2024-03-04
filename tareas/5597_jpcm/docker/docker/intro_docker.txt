@@ -1,0 +1,5 @@
+https://hub.docker.com/u/cord2108
+
+docker pull cord2108/primera_tarea:v1.0
+
+https://hub.docker.com/repository/docker/cord2108/primera_tarea/tags?page=1&ordering=last_updated

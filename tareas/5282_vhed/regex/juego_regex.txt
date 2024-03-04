@@ -1,0 +1,37 @@
+WARMUP
+foo
+Para buscar todas las palabras que contengan la cadena “foo”, en cualquier parte de la palabra
+
+ANCHORS
+ick$
+Selecciona todas las cadenas que terminan en “ice”
+
+IT NEVER ENDS
+fu\b
+\b es un anchor, que sirve para delimitar el inicio o final de una palabra dentro de un texto. Al usar \b, me estoy asegurando que “fu” sean los últimos caracteres de una cadena, sin usar el “$”
+
+RANGED
+^[^g-z]+$
+Las expresiones “^” y “$” indican que los elementos de la cadena deben estar contenidos en las instrucciones. “[^g-z]” indica que la siguiente letra no puede estar entre la g y la z. Por último, “+” me ayuda a indicar que puede tener más de una letra la cadena, pero siguiendo las instrucciones anteriores
+
+BACKREFS
+(.{3}).*\1
+Al meterlo en un paréntesis creo una agrupación. El “ . “ recordemos que indicar cualquier carácter, el {3} nos dice que es una agrupación de los los primeros 3 caracteres de la cadena. Luego con el “ .* “ decimos que puede haber cualquier cantidad de caracteres en medio, pero debe terminar con la misma agrupación de 3 caracteres con la que empezó (esto mediante el \1 que hace referencia al primer grupo)
+
+
+ABBA
+^(?!.*(.)(.)\2\1)
+En este caso queremos que no exista cierto patrón en la palabra. Para esto agrupamos dicho patrón con los paréntesis. El “ ?! “ indica que queremos que no aparezca lo siguiente en la cadena. Como en el ejemplo anterior, agrupamos dos caracteres y decimos que el patrón que queremos evitar implica que se repita el 2o carácter en el 3er puesto, y el 1er carácter en el 4o puesto.
+
+
+A MAN, A PLAN
+^(.)(.).*\2\1$
+Indica que la cadena inicia, luego, la primera y segunda letra deben ser las mismas que la última y antepenúltima letra de la cadena, respectivamente, con cualquier carácter en medio de las mismas
+
+PRIME
+^(?!(xx+)\1+$)
+Tengo que confesar que tuve que pedir ayuda para encontrar esta solución, ya que por mi cuenta no pude. Lo que la expresión indica es que, considerando desde el inicio de la cadena, evitaremos un grupo (a través de los paréntesis y el “ ?! “.  “ (xx+) “ agrupa uno o más caracteres “ x “ consecutivos. Ya habíamos hecho referencia al \1 que apunta a la agrupación que hicimos con las x. Y por último el “ +$ “ nos dice que el patrón se aplica una o más veces.
+
+FOUR
+(.).\1.\1.\1
+Nuevamente creamos un grupo. Este tomará una letra. Lo que indicamos es que queremos en alguna parte de la cadena, se repita esa letra 4 veces, pero que entre cada repetición exista una única letra entre ellos

@@ -1,1 +1,11 @@
 .DStore
+.env
+# Ignorar entornos virtuales de Python
+venv/
+env/
+ENV/
+*/.venv/
+*/venv/
+*/ENV/
+envs/
+.python

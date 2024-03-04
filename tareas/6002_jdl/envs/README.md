@@ -12,9 +12,11 @@ Para asegurarte que funciono correctamente debe ser capaz de ejecutar `python ap
 `pip install virtualenv`
 #### crear virtualenv
 `virtualenv venv1`
+`virtualenv -p python3.9 venv3.9`
+para especificar una versión de python específica
 #### Activar virtualenv
 `activate .... `
-`source venv1/bin/activate`
+`source venv3.9/bin/activate`
 
 # Conda
 Instrucciones para crear un ambiente de conda `environment.yml.` Adapta las instrucciones al repositorio actual, no son exactas.
@@ -50,11 +52,16 @@ Crea tu `.gitignore` en tu copia de esta carpeta en tu folder de tareas verifica
 Asegurate de agregar todas las cosas necesarias a tu `.gitignore` para que no suba archivos de los envs de python ni de conda a tu imagen de dockerhub.
 
 # Docker
-Ahora tienes que crear un docker que utilice `virtualenv` (no pipenv sino virtual env) para instalar los paquetes. Modifica el `Dockerfile.ejemplo` para que instale las cosas correspondientes y pueda ejecutar `python app.py` sin problemas.  
+Ahora tienes que crear un docker que utilice `virtualenv` (no pipenv sino virtual env) para instalar los paquetes. Modifica el `Dockerfile.ejemplo` para que instale las cosas correspondientes y pueda ejecutar `python app.py` sin problemas. 
+`docker build -t penv3.9:1.0.0 .`
+`docker run penv3.9:1.0.0`
+
+`docker tag penv3.9:1.0.0 jero110/envs:latest`
+`docker push jero110/envs:latest`
 
 # Entrega de Ejercicios
-Una vez que esten los ejercicios listos, sube tu imagen de docker a tu repositorio de docker hub y agrega la liga de ese contenedor aqui:  
+Una vez que esten los ejercicios listos, sube tu imagen de docker a tu repositorio de docker hub y agrega la liga de ese co sntenedor aqui:  
 ## Docker
-[liga de docker](url)  
+[liga de docker](https://hub.docker.com/repository/docker/jero110/envs/general)  
 ## Github
 Pide un pull request con las modificaciones necesarias.

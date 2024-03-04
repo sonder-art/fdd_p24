@@ -1,0 +1,32 @@
+-Type f: Filtra para que sean únicamente busque archivos
+-Size 1033c: La c especifica que el tamaño a buscar está en bytes
+ ! -Executable: Es una negación, para encontrar aquellos que no son ejecutables
+
+Nivel 5:
+ssh -p 2220 bandit5@bandit.labs.overthewire.org
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+cd inhere
+find -type f -size 1033c ! -executable
+cat ./maybehere07/.file2
+
+Aquí me fui al directorio anterior
+
+Nivel 6:
+ssh -p 2220 bandit6@bandit.labs.overthewire.org
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+-ls -a
+cd ..
+find -user bandit7 -group bandit6 -size 33c
+cat ./var/lib/dpkg/info/bandit7.password
+
+Nivel 7:
+ssh -p 2220 bandit7@bandit.labs.overthewire.org
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+
+
+
+
+
+
+
+

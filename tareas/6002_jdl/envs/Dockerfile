@@ -9,8 +9,8 @@ COPY requirements_pandas.txt .
 COPY app.py .
 
 # Instala las dependencias
-Run pip install virtualenv
-Run virtualenv -p python3.9 venv3.9
+RUN pip install virtualenv
+RUN virtualenv -p python3.9 venv3.9
 RUN pip install --no-cache-dir -r requirements_pandas.txt
 
 

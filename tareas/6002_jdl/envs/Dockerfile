@@ -5,14 +5,12 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Codigo para manejar ambientes y el codigo necesario
-
+COPY requirements_pandas.txt .
+COPY app.py .
 
 # Instala las dependencias
 Run pip install virtualenv
 Run virtualenv -p python3.9 venv3.9
-COPY requirements_pandas.txt .
-COPY app.py .
-Run . venv3.9/bin/activate
 RUN pip install --no-cache-dir -r requirements_pandas.txt
 
 

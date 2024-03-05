@@ -12,6 +12,7 @@ __pycache__/
 # Ignore Python environment
 venv/
 env/
+envs/
 
 # macOS system files
 .DS_Store

@@ -65,6 +65,7 @@ celerybeat-schedule
 env/
 venv/
 ENV/
+envs/
 
 # macOS
 .DS_Store

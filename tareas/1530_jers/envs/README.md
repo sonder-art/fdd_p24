@@ -19,10 +19,16 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
 # Instalar versión de python
-pyenv install 3.12.0  
+pyenv install 3.9  
 ```
 #### Activar virtualenv
-`activate .... `
+```
+cd tareas/1530_jers
+pyenv local 3.9  # Especifica la versión de Python que acabas de instalar
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+pyenv virtualenv 3.9 fdd_jers  # Elige un nombre para tu entorno virtual
+pyenv activate fdd_jers # Activar el entorno virtual
+```
 
 # Conda
 Instrucciones para crear un ambiente de conda `environment.yml.` Adapta las instrucciones al repositorio actual, no son exactas.
@@ -35,9 +41,10 @@ Para asegurarte que funciono correctamente debe ser capaz de ejecutar `python ap
 
 ### Instrucciones
 #### Instalacion
-`conda  ....`
+`conda conda create --name fuentes_env python=X.Y
+`
 #### Activar conda env
-`activate .... `
+`conda activate fuentes_env `
 
 
 # .gitignore
@@ -62,6 +69,6 @@ Ahora tienes que crear un docker que utilice `virtualenv` (no pipenv sino virtua
 # Entrega de Ejercicios
 Una vez que esten los ejercicios listos, sube tu imagen de docker a tu repositorio de docker hub y agrega la liga de ese contenedor aqui:  
 ## Docker
-[liga de docker](url)  
+[https://hub.docker.com/repository/docker/elcachorrohumano/intro_docker_jers/general](url)  
 ## Github
 Pide un pull request con las modificaciones necesarias.

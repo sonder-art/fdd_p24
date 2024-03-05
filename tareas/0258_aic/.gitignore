@@ -28,3 +28,19 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+
+*/envs/*
+# Archivos generados por la ejecución del código
+*.pyc
+__pycache__/
+
+# Archivos temporales
+*.swp
+*.swo
+*.log
+*.tmp
+
+# Dependencias
+node_modules/
+
+.envs

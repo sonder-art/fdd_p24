@@ -1,1 +1,73 @@
-venv3.9/
+# macOS system files
+.DS_Store
+
+# Python-related files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+env3/
+venv3/
+*.venv/
+*.vscode-test/
+
+# IDE-specific files
+.vscode/
+.vscode-test/
+
+# Python environment marker file
+.python-version
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# User-specific VSCode settings
+.vscode/settings.json
+
+# Python Tools (PTVS)
+__pyston__/
+
+# Rope project settings
+.ropeproject/
+
+# PyCharm files
+.idea/
+
+# Pytest cache
+__pycache__/
+.cpytest/
+
+# Pylint files
+.pylint/
+
+# pytest cache
+.cache/
+
+# SCons
+.sconsign.dblite
+
+# Sphinx documentation
+docs/_build/
+
+# Ignore local history of files
+.history/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# Sublime Text files
+*.sublime-workspace
+*.sublime-project
+
+# End of file

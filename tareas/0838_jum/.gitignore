@@ -1,0 +1,72 @@
+# Bytecode compilado de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Paquetes de Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.wheelhouse/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+pytestdebug.log
+
+# Entornos virtuales
+venv/
+ENV/
+env/
+.env
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# MkDocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+# PyCharm+all JetBrains IDEs
+*.iml
+# VS Code
+.vscode/
+
+# Otros archivos y directorios a ignorar
+*.sqlite3
+*.parquet
+*.csv
+*.json
+*.log
+*.tmp
+
+# Archivos de entorno
+.env*
+!.env.example

@@ -1,0 +1,21 @@
+# Ignorar archivos y carpetas generados por el sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas específicas generadas por herramientas de Python
+.venv/
+env/
+.conda/
+
+# Ignorar archivos de entorno sensibles
+.env
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos de configuración
+.config/
+
+# Ignorar archivos de caché
+.cache/
+

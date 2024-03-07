@@ -1,4 +1,4 @@
-# Byte-compiled / optimized / DLL files
+
 __pycache__/
 *.py[cod]
 *$py.class
@@ -37,12 +37,15 @@ pip-delete-this-directory.txt
 htmlcov/
 .tox/
 .nox/
+
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *.cover
+
+
 *.py,cover
 .hypothesis/
 .pytest_cache/
@@ -104,6 +107,7 @@ ENV/
 env.bak/
 venv.bak/
 
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -111,7 +115,9 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
+
 # mkdocs documentation
+
 /site
 
 # mypy
@@ -122,8 +128,32 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+
 # pytype static type analyzer
 .pytype/
 
 # Cython debug symbols
 cython_debug/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+# PyCharm+all JetBrains IDEs
+*.iml
+# VS Code
+.vscode/
+
+# Otros archivos y directorios a ignorar
+*.sqlite3
+*.parquet
+*.csv
+*.json
+*.log
+*.tmp
+
+# Archivos de entorno
+.env*
+!.env.example
+

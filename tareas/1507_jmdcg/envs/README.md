@@ -8,9 +8,17 @@ Para asegurarte que funciono correctamente debe ser capaz de ejecutar `python ap
 
 ### Instrucciones
 #### Instalacion
-`pip install ....`
-#### Activar virtualenv
-`activate .... `
+`pip install virtualenv`
+#### Crear ambiente virtual
+`virtualenv miPrimerAmbiente`
+#### Activar ambiente virtual
+`source venv/bin/activate`
+#### Instalar dependencias
+`pip install -r requirements_pandas.txt`
+#### Ejecutar archivo de Python
+`python app.py`
+#### Cerrar ambiente virtual
+`deactivate`
 
 # Conda
 Instrucciones para crear un ambiente de conda `environment.yml.` Adapta las instrucciones al repositorio actual, no son exactas.
@@ -22,10 +30,16 @@ Para asegurarte que funciono correctamente debe ser capaz de ejecutar `python ap
 
 
 ### Instrucciones
-#### Instalacion
-`conda  ....`
+#### Crear
+`conda create --name miPrimerCondaEnv`
 #### Activar conda env
-`activate .... `
+`conda activate miPrimerCondaEnv`
+#### Instalar dependencias
+`conda env update -f environment_pandas.yml`
+#### Ejecutar archivo de Python
+`python app.py`
+#### Cerrar ambiente virtual
+`conda deactivate`
 
 
 # .gitignore

@@ -1,0 +1,21 @@
+# Usa una imagen base de Python
+FROM python:3.11-slim
+
+# Establece el directorio de trabajo en /app
+WORKDIR /app
+
+# Copia los archivos de la aplicación al contenedor
+COPY . .
+
+# Instala virtualenv
+RUN pip install virtualenv
+
+# Crea y activa un entorno virtual
+RUN virtualenv venv
+RUN /bin/bash -c "source venv/bin/activate"
+
+# Instala los paquetes requeridos dentro del entorno virtual
+RUN pip install pandas ydata-profiling
+
+# Ejecuta la aplicación Python
+CMD ["python", "app.py"]

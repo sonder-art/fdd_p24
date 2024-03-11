@@ -1,0 +1,26 @@
+docker images
+#Lista de la imagenes locales 
+
+docker ps
+# Muestra los contenedores que están corriendo
+
+docker ps -a
+#Muestra los contenedores inactivos y activos 
+
+docker pull hello-world
+# Importa una imagen
+
+docker start some-mongo
+# inicia un contenedor que no estaba activo 
+
+docker run --name mi-mongodb -d -p 27017:27017 mongo
+# crea un contenedor con una nombre especifico, a un puerto que escojamos, con la imagen seleccionada , se puede crear el contenedor si especificar nombre ni puertos
+
+docker stop some-mongo
+# apaga un contenedor activo 
+
+docker logs name
+#obtienes registros del contenedor
+
+docker exec -it  name/id /bin/bash
+# ejecuta la termianl del contenedor, podemos salir de la terminal con el comando exit 

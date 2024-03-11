@@ -1,0 +1,25 @@
+# Ignore Python virtual environment files
+__pycache__/
+*.pyc
+*.pyo/
+*.pyd/
+*.pyo
+*.pyc
+*.pyz
+*.pyw
+*.py~
+
+# Ignore Python environment
+venv/
+env/
+envs/
+
+# macOS system files
+.DS_Store
+
+# macOS folder config
+.AppleDouble
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk

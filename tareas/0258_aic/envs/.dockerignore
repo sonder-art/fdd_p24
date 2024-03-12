@@ -1,0 +1,32 @@
+# Bytecode de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Directorios de entornos virtuales
+venv/
+.env
+mi_entorno_virtual/
+
+# Archivos y directorios de desarrollo
+.git/
+.gitignore
+.dockerignore
+Dockerfile
+*.md
+*.yml
+*.example
+tests/
+*.log
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos específicos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Directorios que contienen datos generados o directorios de log
+data/
+logs/

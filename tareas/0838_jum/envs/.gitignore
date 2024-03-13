@@ -1,0 +1,31 @@
+.env_ejemplo
+# Entorno virtual
+venv/
+env/
+.virtualenv/
+
+# Bytecode de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Carpetas de paquetes
+*.egg-info/
+dist/
+build/
+
+# Caché de pytest y otras herramientas
+.cache/
+.pytest_cache/
+
+# Archivos de configuración del IDE
+.idea/
+.vscode/
+*.swp
+
+# Archivos específicos
+*.log
+db.sqlite3
+.python-version
+

@@ -1,0 +1,48 @@
+# Ignorar el directorio del entorno virtual
+venv/
+env/
+.virtualenv/
+conda-env/
+
+# Archivos de bytecode de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Directorios de paquetes y distribución
+*.egg-info/
+dist/
+build/
+wheels/
+
+# Caché de pytest y otras herramientas
+.cache/
+.pytest_cache/
+
+# Archivos y directorios de IDE
+.idea/
+.vscode/
+*.swp
+
+# Archivos específicos que no se necesitan en el contenedor
+*.log
+*.csv
+*.json
+.db.sqlite3
+*.env
+.dockerignore
+Dockerfile
+README.md
+LICENSE
+.git/
+.gitignore
+
+# Archivos de configuración de Python
+*.py[a-z]
+Pipfile
+Pipfile.lock
+pyproject.toml
+requirements.txt
+setup.py
+

@@ -9,7 +9,7 @@ Para asegurarte que funciono correctamente debe ser capaz de ejecutar `python ap
 ### Instrucciones
 #### Crear virtual env
 `pip install virtualenv`
-`virtualenv env_prueba1`
+\n`virtualenv env_prueba1`
 #### Instalacion
 `pip install -r requirements_pandas.txt`
 #### Activar virtualenv

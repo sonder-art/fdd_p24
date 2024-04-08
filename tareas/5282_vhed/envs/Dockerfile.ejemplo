@@ -1,11 +1,25 @@
-# Usa una imagen base de Python
-FROM python:3.9-slim
+# Use the official Python image as base image
+FROM python:3.9
 
-# Establece el directorio de trabajo en /app
+# Set the working directory in the container
 WORKDIR /app
 
-# Codigo para manejar ambientes y el codigo necesario
+RUN pip install virtualenv
 
+# Copy the requirements file into the container
+COPY requirements_pandas.txt .
 
-# Define el comando por defecto para ejecutar la aplicación
+# Create and activate a virtual environment
+RUN virtualenv venv
+SHELL ["/bin/bash", "-c"]
+RUN source venv/bin/activate
+
+# Install dependencies
+RUN pip install -r requirements_pandas.txt
+
+# Copy the Python script into the container
+COPY app.py .
+
+# Set the command to run the script
 CMD ["python", "app.py"]
+

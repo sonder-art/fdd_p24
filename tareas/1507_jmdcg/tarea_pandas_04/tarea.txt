@@ -1,0 +1,5 @@
+El comando que buscamos es:
+df.loc[(df['nombre'] == 'Juan') & (df['edad'] == 25), 'edad'] = -25
+
+Este comando buscará las filas en las que nombre == Juan y edad == 25. Luego, en dichas filas,
+seleccionará la columna de edad y cambiará los valores por -25.

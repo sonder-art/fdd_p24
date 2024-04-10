@@ -1,0 +1,12 @@
+$ which -a python python3 python2  
+Te dice que versiones de python tienes
+
+Puedes cambiar el nombre del archivo yml y la version de python que tiene
+conda env list te muestra todos tus envs 
+
+conda env remove -n nombre_del_env lo elimina
+
+#### Instalacion
+`conda env create -f environment_pandas.yml`
+#### Activar conda env
+`$conda activate enviroment_pandas`

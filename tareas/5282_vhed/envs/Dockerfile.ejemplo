@@ -1,0 +1,27 @@
+# Usa una imagen base de Python
+FROM python:3.9
+
+# Copia el código fuente de la aplicación al contenedor
+COPY . /app
+
+# Establece el directorio de trabajo en /app
+WORKDIR /app
+
+# Copia el archivo requirements_pandas.txt al directorio de trabajo
+COPY requirements_pandas.txt .
+
+# Instala virtualenv
+RUN pip install virtualenv
+
+# Crea un entorno virtual llamado 'venv'
+RUN python -m virtualenv venv
+
+# Activa el entorno virtual
+RUN /bin/bash -c "source venv/bin/activate"
+
+# Instala los paquetes necesarios desde el archivo requirements.txt
+RUN venv/bin/pip install -r requirements_pandas.txt
+
+# Ejecuta la aplicación
+CMD ["venv/bin/python", "app.py"]
+

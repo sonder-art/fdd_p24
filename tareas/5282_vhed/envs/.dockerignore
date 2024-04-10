@@ -1,0 +1,39 @@
+# Ignorar archivos y directorios generados por sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de texto
+*.txt
+
+# Ignorar archivos de registro y temporales
+*.log
+logs/
+tmp/
+*.swp
+
+# Ignorar archivos de caché
+*.cache
+
+# Ignorar archivos de dependencias y construcción
+node_modules/
+bower_components/
+*.pyc
+__pycache__/
+*.egg-info/
+venv/
+env/
+.env
+
+# Ignorar archivos de compilación y empaquetado
+dist/
+build/
+target/
+
+# Ignorar archivos específicos de IDEs
+.idea/
+.vscode/
+
+# Ignorar archivos de configuración local
+*.local
+
+

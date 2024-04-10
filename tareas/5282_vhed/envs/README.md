@@ -54,6 +54,6 @@ Ahora tienes que crear un docker que utilice `virtualenv` (no pipenv sino virtua
 # Entrega de Ejercicios
 Una vez que esten los ejercicios listos, sube tu imagen de docker a tu repositorio de docker hub y agrega la liga de ese contenedor aqui:  
 ## Docker
-[liga de docker](url)  
+(https://hub.docker.com/r/victorh22/docker_con_env)
 ## Github
 Pide un pull request con las modificaciones necesarias.

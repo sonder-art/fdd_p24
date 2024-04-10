@@ -1,25 +1,27 @@
-# Use the official Python image as base image
+# Usa una imagen base de Python
 FROM python:3.9
 
-# Set the working directory in the container
+# Copia el código fuente de la aplicación al contenedor
+COPY . /app
+
+# Establece el directorio de trabajo en /app
 WORKDIR /app
 
-RUN pip install virtualenv
-
-# Copy the requirements file into the container
+# Copia el archivo requirements_pandas.txt al directorio de trabajo
 COPY requirements_pandas.txt .
 
-# Create and activate a virtual environment
-RUN virtualenv venv
-SHELL ["/bin/bash", "-c"]
-RUN source venv/bin/activate
+# Instala virtualenv
+RUN pip install virtualenv
 
-# Install dependencies
-RUN pip install -r requirements_pandas.txt
+# Crea un entorno virtual llamado 'venv'
+RUN python -m virtualenv venv
 
-# Copy the Python script into the container
-COPY app.py .
+# Activa el entorno virtual
+RUN /bin/bash -c "source venv/bin/activate"
 
-# Set the command to run the script
-CMD ["python", "app.py"]
+# Instala los paquetes necesarios desde el archivo requirements.txt
+RUN venv/bin/pip install -r requirements_pandas.txt
+
+# Ejecuta la aplicación
+CMD ["venv/bin/python", "app.py"]
 

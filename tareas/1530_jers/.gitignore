@@ -1,0 +1,7 @@
+.DS_Store
+# Ignorar entornos virtuales de Python
+venv/
+ENV/
+*/.venv/
+*/venv/
+*/ENV/

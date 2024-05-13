@@ -1,0 +1,23 @@
+# Usa una imagen base de Python
+FROM python:3.9-slim
+
+# Establece el directorio de trabajo en /app
+WORKDIR /app
+
+# Instala virtualenv
+RUN apt-get update && \
+    apt-get install -y python3-venv && \
+    rm -rf /var/lib/apt/lists/*
+
+# Crea y activa un entorno virtual
+RUN python3 -m venv venv
+ENV PATH="/app/venv/bin:$PATH"
+
+# Copia los archivos de la aplicación al contenedor
+COPY . .
+
+# Instala las dependencias de la aplicación
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Define el comando por defecto para ejecutar la aplicación
+CMD ["python", "app.py"]

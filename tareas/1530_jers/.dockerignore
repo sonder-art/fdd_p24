@@ -1,0 +1,12 @@
+# Ignorar archivos y directorios específicos
+.git
+.gitignore
+.env
+*.pyc
+__pycache__
+venv/
+env/
+ENV/
+node_modules/
+*.log
+*.tmp

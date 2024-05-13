@@ -1,0 +1,37 @@
+Frida Márquez
+
+Warmup: foo
+Trate de buscar algun patron visible y me llamo la atención que todas las pabalras tenian 'foo'. Entonces lo único que hice fue escribir eso, ya que las de la otra columna no tenian ese patron
+
+
+Anchors: ick$
+Me di curnta de que todas las palabras tenian el patrón 'ick' pero las de la primera columna terminaban en eso y todas las demas lo tenian entre las otras letras de la palabra. Entonces use el '$' para especificar el final de la cadena. 
+
+
+It never ends: fu\b
+Decia que no podiamos usar '$' entonces no pude usar el comando 'fu$'. Entonces me puse a investigar y encontre el '\b' al final de la secuencia se encarga de revisar el limite (o el final) de las palabras.
+
+
+Ranges: \b[a-f]+\b
+Encontré que al poner el comando '\b' al inicio y al final del regex lo que hace es buscar la secuencia en toda la palabra. La secuencia que utilice fue un intervalo con letras de la [a-f] que se repitan mas de una vez '+'
+
+
+Backrefs: (...).*\1
+Encontre que todas las palabras tenian un patron de repetir una misma secuencia. Investigué y vi que el comando '(...)' encuentra cualquier secuencia de tres caracteres, el '.*' encuentra cualquier secuencia de caracteres, ya sea corta o larga, antes de la repetición del grupo de tres caracteres y '\1'  repite la misma secuencia de antes. 
+
+
+Abba: ^(?!.*([a-z])([a-z])\2\1)
+Trate de resolverla con la idea de que filtrara las palabras que después de cualquier cantidad de caracteres '.*' no haya dos letras seguidas de la misma manera (o sea, como en espejo). Lo hice usando '^' porque se me hizo mas facil ver el patron en las palabras de la segunda columna. 
+
+A man, a plan: ^(.)[^p].*\1$
+Todas las palabras de la primera columna empiezan y terminan con la misma palabra. La verdad aqui empece a pedirle ayuda a chat gpt porque ya no estaba entendiendo como resolverlas. Entonces me ayudo a hacer el regex que filtrara las palabras cque empiezan y terminan con la misma palabra y al final solo agregue el ^p para que no se filtrara una de las palabras de la segunda columna.
+
+
+Prime: ^(?!(xx+)\1+$)
+Esta la verdad me costo trabajo, no la termino de entender. Primero quise usar '{}' para el numero de secuencias pero no supe como hacerla. Supongo que tiene algo que ver con los numeros, pero la verdad la tuve que buscar porque no entendi como hacerla.
+
+
+Four: ([aeiou]).\1.\1.\1
+Me di cuenta que todas las palabras tenian vocales y se repetian. Entre dos vocales habia dos otras letras. Entonces lo que hice fue usar el '\1' para repetir la misma secuencia. La pista de este nivel si ayudo jajaj. 
+
+

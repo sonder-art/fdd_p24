@@ -1,0 +1,34 @@
+Comandos Docker - video
+
+1. docker pull: Baja una imagen desde Docker Hub a tu computadora 
+
+2. docker run: Crea un nuevo contenedor usando una imagen 
+
+3. docker ps: Muestra los contenedores que están corriendo 
+
+4. docker ps -a: Usando -a también se muestran los contenedores que están detenidos 
+
+5. docker run -p [puerto]: Ejecuta un contenedor y conecta un puerto del contenedor a un puerto de tu computadora 
+
+6. docker run -d: Corre un contenedor en modo "detached" 
+
+7. docker stop: Detiene un contenedor que está corriendo 
+
+8. docker start: Inicia un contenedor que está detenido 
+
+9. docker logs: Muestra los mensajes y errores de un contenedor 
+
+10. docker exec: Ejecuta un comando dentro de un contenedor que está corriendo 
+
+11. docker build: Crea una imagen Docker usando un archivo Dockerfile
+
+12. docker push: Sube una imagen que hiciste a Docker Hub
+
+13. docker images: Muestra todas las imágenes que tienes descargadas 
+
+14. docker rmi: Borra una imagen que ya no necesitas 
+
+15. docker volume ls: Muestra todos los volúmenes que tienes
+
+16. docker rm: Borra un contenedor que está detenido
+

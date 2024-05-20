@@ -1,0 +1,47 @@
+# Entornos virtuales de Python
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Entornos Conda
+*.conda
+*.env
+*.venv
+*.virtualenv
+env/
+env.bak/
+miniconda3/
+
+# Archivos binarios de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Archivos de configuración de Conda
+.condarc
+.conda/
+
+# Archivos de configuración de Jupyter
+.ipynb_checkpoints
+
+# Archivos sensibles
+.env
+.env.*
+
+# Archivos de paquetes
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Archivos de caché y logs
+*.log
+
+# Otros
+.DS_Store
+
+#Para esta tarea
+.env_ejemplo

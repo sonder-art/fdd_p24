@@ -1,0 +1,24 @@
+# Ignorar archivos y carpetas generados por el sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas específicas generadas por pyenv
+.python-version
+.venv
+env/
+ENV/
+
+# Ignorar carpetas específicas generadas por Conda
+envs/
+.conda/
+
+# Ignorar archivos binarios de Python
+*.pyc
+__pycache__/
+
+# Ignorar archivos de entorno sensibles
+.env
+
+# Agregar un ejemplo de archivo .env para referencia
+.env_ejemplo
+

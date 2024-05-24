@@ -1,0 +1,24 @@
+# Usa una imagen base de Python
+FROM python:3.9-slim
+
+# Establece el directorio de trabajo en /app
+WORKDIR /app
+
+# Instala virtualenv
+RUN pip install virtualenv
+
+# Crea y activa un entorno virtual
+RUN virtualenv .venv
+RUN . .venv/bin/activate
+
+# Copia el archivo requirements.txt al contenedor
+COPY requirements.txt .
+
+# Instala los paquetes requeridos en el entorno virtual
+RUN .venv/bin/pip install -r requirements.txt
+
+# Copia el resto de los archivos al contenedor
+COPY . .
+
+# Define el comando por defecto para ejecutar la aplicación
+CMD ["python", "app.py"]

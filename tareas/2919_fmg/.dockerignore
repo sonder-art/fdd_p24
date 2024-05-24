@@ -1,0 +1,44 @@
+# Ignorar entornos virtuales de Python
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignorar entornos Conda
+*.conda
+*.env
+*.venv
+*.virtualenv
+env/
+env.bak/
+miniconda3/
+
+# Ignorar archivos binarios de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignorar archivos de configuración de Conda
+.condarc
+.conda/
+
+# Ignorar archivos de configuración de Jupyter
+.ipynb_checkpoints
+
+# Ignorar archivos sensibles
+.env
+.env.*
+
+# Ignorar archivos de paquetes
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Ignorar archivos de caché y logs
+*.log
+
+# Ignorar otros archivos innecesarios
+.DS_Store

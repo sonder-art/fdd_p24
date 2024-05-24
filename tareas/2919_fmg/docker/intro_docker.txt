@@ -1,0 +1,3 @@
+Link a la cuenta de DockerHub: https://hub.docker.com/u/fridaamarquezg
+
+Link a la imagen: https://hub.docker.com/layers/fridaamarquezg/tarea/latest/images/sha256-27bdffbc99be182d61218522df17c10e88a67564a35aad3df1bb247c0c8a060b?context=explore

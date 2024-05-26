@@ -1,3 +1,4 @@
+
 # Virtualenv
 Debes crear un virtualenv en tu local siguiendo las siguientes instrucciones. Investiga las instrucciones y adaptalas al repositorio actual. 
 
@@ -52,4 +53,4 @@ Una vez que esten los ejercicios listos, sube tu imagen de docker a tu repositor
 ## Docker
 [liga de docker](url)  
 ## Github
-Pide un pull request con las modificaciones necesarias.
+

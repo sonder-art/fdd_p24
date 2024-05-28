@@ -1,0 +1,15 @@
+# Carpetas generadas por pyenv
+.python-version
+.venv
+env/
+venv/
+# Archivos binarios de Python
+*.pyc
+__pycache__/
+# Archivos .env
+*.env
+# Enlaces simbólicos
+lib64
+
+# Archivo pyvenv.cfg
+pyvenv.cfg
